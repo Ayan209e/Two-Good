@@ -1,0 +1,33 @@
+.overlay-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.menu-item {
+  font-size: 80px;
+  font-family: "futura";
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-item svg {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.menu-item:hover svg {
+  opacity: 1;
+  color: #ffffff80;
+}
+
+.menu-item:hover {
+  color: #ffffff80;
+}

@@ -1,0 +1,26 @@
+.quick-links {
+  font-family: "helvetica";
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.quick-links a {
+  display: block;
+  font-size: 14px;
+  color: white;
+}
+
+.link-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff80;
+  margin-bottom: 24px;
+}
+
+.link-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

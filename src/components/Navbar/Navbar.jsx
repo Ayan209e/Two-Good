@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Navbar.styles.css";
+import "./Navbar.css";
 import { TwoGood, Logo, CartIcon } from "../../assets";
 import useNavLogoAnimation from "../../hooks/useNavLogoAnimation";
+import Overlay from "../Overlay/Overlay";
 
 const Navbar = () => {
   const cartHasItem = false;
@@ -73,13 +74,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <div className={`overlay ${isOverlayOpen ? "open" : ""}`}>
-        {isDonateMenuOpen ? (
-          <div style={{ color: "white" }}>Donate</div>
-        ) : (
-          <div style={{ color: "white" }}>Menu</div>
-        )}
-      </div>
+      <Overlay isOverlayOpen={isOverlayOpen} />
     </div>
   );
 };

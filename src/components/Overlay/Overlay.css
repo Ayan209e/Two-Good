@@ -1,0 +1,33 @@
+.overlay {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 999;
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  padding: 24px;
+  gap: 24px;
+}
+
+.overlay.open {
+  top: 0;
+}
+
+.left-section {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.right-section {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
