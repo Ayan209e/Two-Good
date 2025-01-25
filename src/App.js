@@ -3,9 +3,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Two Good
+      <h1>Two Good Co.</h1>
     </div>
   );
 }
+
 
 export default App;
