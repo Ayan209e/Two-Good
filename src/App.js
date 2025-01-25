@@ -1,12 +1,19 @@
-import './App.css';
+import "./global.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Two Good Co.</h1>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "200vh",
+        // backgroundColor: "aqua",
+      }}
+    >
+      dsfdfg dsfds fd
     </div>
   );
 }
-
 
 export default App;

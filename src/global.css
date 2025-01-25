@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "abc";
+  src: url("/public/fonts/ABCSocialMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "futura";
+  src: url("/public/fonts/Futura-Bold.ttf");
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url("/public/fonts/HelveticaNowText-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
