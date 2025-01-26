@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import "./OverlayMenu.css";
 import { Underline } from "../../../assets";
 
-const OverlayMenu = ({ isOverlayOpen, handleClick }) => {
+const OverlayMenu = ({ isOverlayOpen, handleClick, setShowDonationMenu }) => {
   const menuItemsRef = useRef([]);
 
   useEffect(() => {

@@ -9,17 +9,23 @@ const Navbar = () => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDonateMenuOpen, setIsDonateMenuOpen] = useState(false);
+  const [showDonationMenu, setShowDonationMenu] = useState(false);
+  const [showSignInMenu, setShowSignInMenu] = useState(false);
   const toggleOverlay = () => {
     setIsOverlayOpen(!isOverlayOpen);
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setIsDonateMenuOpen(false);
+    setShowDonationMenu(false);
+    setShowSignInMenu(false);
     toggleOverlay();
   };
 
   const toggleDonateMenu = () => {
     setIsDonateMenuOpen(!isMenuOpen);
+    setShowDonationMenu(true);
     toggleOverlay();
   };
 
@@ -74,7 +80,13 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <Overlay isOverlayOpen={isOverlayOpen} />
+      <Overlay
+        isOverlayOpen={isOverlayOpen}
+        showDonationMenu={showDonationMenu}
+        showSignInMenu={showSignInMenu}
+        setShowDonationMenu={setShowDonationMenu}
+        setShowSignInMenu={setShowSignInMenu}
+      />
     </div>
   );
 };
