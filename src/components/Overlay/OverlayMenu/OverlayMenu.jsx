@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import "./OverlayMenu.css";
 import { Underline } from "../../../assets";
 
-const OverlayMenu = ({ isOverlayOpen }) => {
+const OverlayMenu = ({ isOverlayOpen, handleClick }) => {
   const menuItemsRef = useRef([]);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ const OverlayMenu = ({ isOverlayOpen }) => {
           className="menu-item"
           key={index}
           ref={(el) => (menuItemsRef.current[index] = el)}
+          onClick={() => handleClick(item)}
         >
           {item}
           <Underline />
