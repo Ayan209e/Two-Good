@@ -31,3 +31,18 @@
 .menu-item:hover {
   color: #ffffff80;
 }
+
+@media (max-width: 580px) {
+  .overlay-menu {
+    align-items: center;
+  }
+  .menu-item {
+    font-size: 64px;
+  }
+}
+
+@media (max-height: 900px) {
+  .menu-item {
+    font-size: 7vh;
+  }
+}

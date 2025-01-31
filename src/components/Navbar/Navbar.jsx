@@ -49,7 +49,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="nav-links">
-          <div className="nav-links" ref={navLinksRef}>
+          <div className="nav-link-items" ref={navLinksRef}>
             <div className="nav-item">
               Shop
               <div className="hover-line" />

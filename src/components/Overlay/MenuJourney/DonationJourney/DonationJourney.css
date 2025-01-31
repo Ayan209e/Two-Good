@@ -225,3 +225,83 @@
 .tab {
   font-size: 10px;
 }
+
+@media (max-width: 580px) {
+  .donation-journey {
+    width: 100%;
+    justify-content: end;
+    height: 100%;
+    margin-bottom: 24px;
+  }
+  .back-to-menu {
+    font-size: 10px;
+  }
+  .donation-header {
+    font-size: 24px;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .tab-item {
+    font-size: 10px;
+    padding: 10px;
+    padding-bottom: 8px;
+  }
+  .donation-options {
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .option-item {
+    padding: 10px 20px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .donation-input {
+    margin-top: 0px;
+  }
+  .donation-input input {
+    padding: 14px 8px;
+    padding-left: 36px;
+  }
+  .dollar {
+    top: 18px;
+    left: 18px;
+  }
+  .donate-button {
+    padding: 17px 16px;
+  }
+  .thanks {
+    padding: 16px;
+  }
+  .transaction {
+    gap: 10px;
+    font-size: 10px;
+  }
+  .amount {
+    font-size: 12px;
+  }
+  .tab {
+    font-size: 8px;
+  }
+  .hearts {
+    transform: translateY(-120%);
+    scale: 0.8;
+  }
+}
+
+@media (max-height: 700px) {
+  .donation-journey {
+    margin-bottom: 0px;
+  }
+  .thanks {
+    scale: 0.8;
+  }
+}
+
+@media (max-height: 750px) and (max-width: 400px) {
+  .donation-journey {
+    margin-bottom: 0px;
+  }
+  .thanks {
+    display: none;
+  }
+}

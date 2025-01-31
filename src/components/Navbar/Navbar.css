@@ -24,6 +24,13 @@ nav.overlay-open {
   cursor: pointer;
 }
 
+.nav-link-items {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 64px;
+}
+
 .nav-item {
   position: relative;
 }
@@ -93,4 +100,10 @@ nav.overlay-open {
 
 .menu.open .lower {
   transform: rotate(-45deg) translateY(-3.5px);
+}
+
+@media (max-width: 700px) {
+  .nav-link-items {
+    display: none;
+  }
 }
