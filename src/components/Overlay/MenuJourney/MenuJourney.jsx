@@ -1,5 +1,6 @@
 import React from "react";
 import DonationJourney from "./DonationJourney/DonationJourney";
+import SignInJourney from "./SignInJourney/SignInJourney";
 
 const MenuJourney = ({
   showDonationMenu,
@@ -12,7 +13,9 @@ const MenuJourney = ({
       {showDonationMenu ? (
         <DonationJourney setShowDonationMenu={setShowDonationMenu} />
       ) : null}
-      {showSignInMenu ? <div>Sign In Menu</div> : null}
+      {showSignInMenu ? (
+        <SignInJourney setShowSignInMenu={setShowSignInMenu} />
+      ) : null}
     </div>
   );
 };

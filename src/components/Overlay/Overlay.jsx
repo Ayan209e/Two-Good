@@ -3,6 +3,8 @@ import "./Overlay.css";
 import OverlayQuickLinks from "./OverlayQuickLinks/OverlayQuickLinks";
 import OverlayMenu from "./OverlayMenu/OverlayMenu";
 import MenuJourney from "./MenuJourney/MenuJourney";
+import { useDispatch } from "react-redux";
+import { setIsLoggedIn, setUserEmail } from "../../store/action";
 
 const Overlay = ({
   isOverlayOpen,
@@ -11,11 +13,18 @@ const Overlay = ({
   setShowDonationMenu,
   setShowSignInMenu,
 }) => {
+  const dispatch = useDispatch();
   const handleDonationFlow = () => {
     setShowDonationMenu(true);
   };
   const handleSignInFlow = () => {
     setShowSignInMenu(true);
+  };
+
+  const handleLogOut = () => {
+    dispatch(setIsLoggedIn(false));
+    dispatch(setUserEmail(""));
+    window.location.href = "/";
   };
 
   const handleClick = (item) => {
@@ -30,6 +39,7 @@ const Overlay = ({
       contact: () => (window.location.href = "contact"),
       donate: handleDonationFlow,
       "sign in": handleSignInFlow,
+      "log out": handleLogOut,
       default: () => (window.location.href = "/"),
     };
 

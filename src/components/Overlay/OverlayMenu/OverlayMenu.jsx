@@ -2,9 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./OverlayMenu.css";
 import { Underline } from "../../../assets";
+import { useSelector } from "react-redux";
 
 const OverlayMenu = ({ isOverlayOpen, handleClick, setShowDonationMenu }) => {
   const menuItemsRef = useRef([]);
+  const isLoggedIn = useSelector((state) => state.userStore.isLoggedIn);
 
   useEffect(() => {
     if (isOverlayOpen) {
@@ -29,7 +31,7 @@ const OverlayMenu = ({ isOverlayOpen, handleClick, setShowDonationMenu }) => {
         "About",
         "Contact",
         "Donate",
-        "Sign In",
+        isLoggedIn ? "Log Out" : "Sign In",
       ].map((item, index) => (
         <div
           className="menu-item"
