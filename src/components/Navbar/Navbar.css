@@ -24,6 +24,12 @@ nav.overlay-open {
   cursor: pointer;
 }
 
+.nav-links button {
+  font-family: "helvetica";
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .nav-link-items {
   display: flex;
   justify-content: center;

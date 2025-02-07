@@ -33,7 +33,7 @@ const OverlayMenu = ({ isOverlayOpen, handleClick, setShowDonationMenu }) => {
         "Donate",
         isLoggedIn ? "Log Out" : "Sign In",
       ].map((item, index) => (
-        <div
+        <button
           className="menu-item"
           key={index}
           ref={(el) => (menuItemsRef.current[index] = el)}
@@ -41,7 +41,7 @@ const OverlayMenu = ({ isOverlayOpen, handleClick, setShowDonationMenu }) => {
         >
           {item}
           <Underline />
-        </div>
+        </button>
       ))}
     </div>
   );

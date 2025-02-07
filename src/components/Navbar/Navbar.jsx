@@ -50,33 +50,33 @@ const Navbar = () => {
         </div>
         <div className="nav-links">
           <div className="nav-link-items" ref={navLinksRef}>
-            <div className="nav-item">
+            <button className="nav-item">
               Shop
               <div className="hover-line" />
-            </div>
-            <div className="nav-item">
+            </button>
+            <button className="nav-item">
               Catering
               <div className="hover-line" />
-            </div>
-            <div
+            </button>
+            <button
               className={`menu nav-item ${isOverlayOpen ? "open" : ""}`}
               onClick={toggleDonateMenu}
             >
               Donate
               <div className="hover-line" />
-            </div>
+            </button>
           </div>
           <div className={`nav-actions ${isOverlayOpen ? "open" : ""}`}>
-            <div
+            <button
               className={`menu ${isOverlayOpen ? "open" : ""}`}
               onClick={toggleMenu}
             >
               <span className="upper"></span>
               <span className="lower"></span>
-            </div>
-            <div className="cart">
+            </button>
+            <button className="cart">
               <CartIcon cartHasItem={cartHasItem} />
-            </div>
+            </button>
           </div>
         </div>
       </nav>

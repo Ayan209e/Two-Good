@@ -62,6 +62,7 @@
 
 .signin-button {
   padding: 18px 10px;
+  padding-bottom: 14px;
   width: 100%;
   color: #000;
   background-color: white;
@@ -71,6 +72,9 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: "helvetica";
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .signin-button:hover {
