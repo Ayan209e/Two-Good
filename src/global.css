@@ -48,3 +48,13 @@ button {
   text-align: inherit;
   line-height: inherit;
 }
+
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 24px;
+  font-family: "helvetica";
+  margin-top: 130px;
+  overflow: hidden;
+}
