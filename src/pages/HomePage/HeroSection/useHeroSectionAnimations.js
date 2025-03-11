@@ -1,11 +1,7 @@
-import React, { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./HeroSection.css";
+import gsap from "gsap";
+import { useEffect } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const HeroSection = () => {
+export const useHeroSectionAnimations = () => {
   useEffect(() => {
     const tl = gsap.timeline();
 
@@ -47,23 +43,4 @@ const HeroSection = () => {
       },
     });
   }, []);
-
-  return (
-    <div className="hero-container">
-      <div className="hero-header">
-        <h1>
-          <span>Change</span>
-        </h1>
-        <h1>
-          <span>The</span> <span>Course.</span>
-        </h1>
-      </div>
-      <div className="teaser">
-        <img src="/assets/teaser.avif" alt="teaser" />
-      </div>
-      <div style={{ height: "100vh" }}></div>
-    </div>
-  );
 };
-
-export default HeroSection;

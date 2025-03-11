@@ -1,12 +1,8 @@
-import HeroSection from "./components/HeroSection/HeroSection";
 import "./global.css";
+import { HomePage } from "./pages/HomePage/HomePage";
 
 function App() {
-  return (
-    <div className="App">
-      <HeroSection />
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;
