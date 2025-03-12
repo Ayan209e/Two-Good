@@ -1,0 +1,62 @@
+.quote-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+}
+
+.quote-section .heading {
+  font-family: "futura";
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+  max-width: 14em;
+}
+
+.quote-section .content {
+  font-family: "helvetica";
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 30em;
+  margin-right: 150px;
+}
+
+.quote-section .content .cta {
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-section .cta-border {
+  border-bottom: 1px solid #000;
+  width: 115px;
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .quote-section .content {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quote-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .quote-section .content .cta {
+    align-items: center;
+  }
+}
