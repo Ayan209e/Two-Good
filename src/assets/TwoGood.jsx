@@ -9,7 +9,7 @@ const TwoGood = () => (
     xmlns="http://www.w3.org/2000/svg"
     style={{ transform: "translate(0px, 0px)" }}
   >
-    <g clip-path="url(#clip0_2228_162)">
+    <g clipPath="url(#clip0_2228_162)">
       <path
         d="M5.50062 6.4473H0V0.557617H17.7807V6.4473H12.2464V25.4842H5.50062V6.4473Z"
         fill="currentColor"

@@ -1,0 +1,139 @@
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.testimonial-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-desc {
+  margin-top: 72px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-size: 72px;
+  line-height: 1em;
+  font-family: "futura";
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  max-width: 70%;
+}
+
+.name {
+  margin-bottom: 72px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1em;
+  font-family: "helvetica";
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.name::before {
+  content: "- ";
+}
+
+@media  (max-width: 768px) {
+  .testimonial-desc {
+    font-size: 32px;
+    max-width: 100%;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+    
+}
+
+/* Testimonial Carousel */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-190px * 10));
+  }
+}
+
+.testimonial-carousel {
+  width: 100%;
+  margin-top: 48px;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-carousel::before,
+.testimonial-carousel::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100px;
+  z-index: 2;
+}
+
+.testimonial-carousel::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.testimonial-carousel::before {
+  left: 0;
+  top: 0;
+}
+
+.testimonial-item {
+  animation: scroll 30s linear infinite;
+  display: flex;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 24px;
+  line-height: 1em;
+  transition: all 0.3s ease;
+  width: min-content;
+}
+
+.testimonial-content:hover {
+  color: gray;
+}
+
+.radio {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  transition: all 0.3s ease;
+}
+
+.radio.selected {
+  background-color: #000;
+}
+
+.underline {
+  opacity: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.underline.selected {
+  opacity: 1;
+}
+
+.testimonial-item.paused {
+  animation-play-state: paused;
+}
