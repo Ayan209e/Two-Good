@@ -110,7 +110,7 @@
 }
 
 .error-message {
-  color: red;
+  color: #ec9687;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.06em;
