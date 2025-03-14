@@ -1,0 +1,37 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Cursor from "./components/Cursor/Cursor";
+import { Navbar } from "./components";
+import { Home } from "./pages/Home/Home";
+import { Shop } from "./pages/Shop/Shop";
+import { Catering } from "./pages/Catering/Catering";
+import { Contact } from "./pages/Contact/Contact";
+import { Impact } from "./pages/Impact/Impact";
+import { Stories } from "./pages/Stories/Stories";
+import { About } from "./pages/About/About";
+import { PDP } from "./pages/PDP/PDP";
+import { Footer } from "./components/Footer/Footer";
+import { NotFound } from "./pages/NotFound.jsx/NotFound";
+
+const AppRoutes = () => {
+  return (
+    <Router>
+      <Cursor />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/catering" element={<Catering />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/impact" element={<Impact />} />
+        <Route path="/stories" element={<Stories />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/product/:slug" element={<PDP />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
+};
+
+export default AppRoutes;

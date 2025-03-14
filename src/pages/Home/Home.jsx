@@ -6,7 +6,7 @@ import { ProductsSection } from "./ProductsSection/ProductsSection";
 import { TestimonialsSection } from "./TestimonialsSection/TestimonialsSection";
 import { ImpactSection } from "./ImpactSection/ImpactSection";
 
-export const HomePage = () => {
+export const Home = () => {
   return (
     <div className="App">
       <HeroSection />
