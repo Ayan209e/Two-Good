@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ImpactSection.css";
 import { LinkButton } from "../../../components/LinkButton/LinkButton";
+import gsap from "gsap";
 
 export const ImpactSection = () => {
+  useEffect(() => {
+    gsap.to(".impact-section-content", {
+      yPercent: 50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".impact-section",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    gsap.to(".impact-image img", {
+      yPercent: 50,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".impact-section",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
     <div className="impact-section">
       <div className="impact-section-content">

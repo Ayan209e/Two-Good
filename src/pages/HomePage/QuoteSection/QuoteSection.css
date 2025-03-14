@@ -3,8 +3,8 @@
   justify-content: space-between;
   align-items: start;
   gap: 16px;
-  margin-bottom: 24px;
-  margin-top: 24px;
+  margin-bottom: 32px;
+  margin-top: 64px;
 }
 
 .quote-section .heading {
