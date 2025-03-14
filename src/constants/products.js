@@ -1,7 +1,5 @@
 // Categories - bath, pantry, pre-sale, donation, home, gift
 
-import { href } from "react-router-dom";
-
 export const products = [
   {
     name: "Nourish & soothe body lotion",

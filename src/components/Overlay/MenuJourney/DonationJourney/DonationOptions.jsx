@@ -15,6 +15,7 @@ const DonationOptions = ({ inputValue, selectedOption, setSelectedOption }) => {
     } else {
       setSelectedOption(null);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue]);
 
   return (

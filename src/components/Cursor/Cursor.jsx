@@ -65,6 +65,7 @@ function Cursor() {
       window.removeEventListener("resize", onResize);
       cancelAnimationFrame(requestRef.current);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   let { x, y } = mousePosition;

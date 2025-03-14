@@ -8,7 +8,6 @@ const Navbar = () => {
   const cartHasItem = false;
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDonateMenuOpen, setIsDonateMenuOpen] = useState(false);
   const [showDonationMenu, setShowDonationMenu] = useState(false);
   const [showSignInMenu, setShowSignInMenu] = useState(false);
   const toggleOverlay = () => {
@@ -17,14 +16,12 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    setIsDonateMenuOpen(false);
     setShowDonationMenu(false);
     setShowSignInMenu(false);
     toggleOverlay();
   };
 
   const toggleDonateMenu = () => {
-    setIsDonateMenuOpen(!isMenuOpen);
     setShowDonationMenu(true);
     toggleOverlay();
   };
