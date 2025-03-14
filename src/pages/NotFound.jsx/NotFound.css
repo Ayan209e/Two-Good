@@ -1,0 +1,100 @@
+.not-found {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 48px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.not-found .content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: "helvetica";
+  font-weight: 400;
+  line-height: 1.5;
+  align-items: center;
+}
+
+.not-found .cta {
+  max-width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 12px 24px;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.not-found .cta-icon {
+  rotate: 180deg;
+  display: flex;
+}
+
+.not-found .cta:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Animations */
+
+.scroll-wrapper {
+  width: calc(100% + 48px);
+  overflow: hidden;
+}
+
+.scroll {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll h1 {
+  font-size: 200px;
+  font-family: "futura";
+  font-weight: 100;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 170px;
+  line-height: 148px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  padding-top: 24px;
+  animation-timing-function: linear;
+  margin-right: 64px;
+  animation-name: scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.scroll.bottom {
+  border-top: 0px;
+}
+
+.scroll.bottom h1 {
+  animation-duration: 20s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
