@@ -6,6 +6,7 @@ import store, { persistor } from "./store";
 import { PersistGate } from "redux-persist/integration/react";
 import { Navbar } from "./components";
 import Cursor from "./components/Cursor/Cursor";
+import { Footer } from "./components/Footer/Footer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Cursor />
       <Navbar />
       <App />
+      <Footer />
     </PersistGate>
   </Provider>
 );
