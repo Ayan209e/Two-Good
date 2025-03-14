@@ -67,6 +67,13 @@
   font-weight: 400;
 }
 
+.footer-header .circle-stroke{
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  width: 200px;
+}
+
 @media (max-width: 950px) {
   .footer-header {
     font-size: 24px;

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import "./FooterHeader.css";
 import { ArrowRight, Enter } from "../../../assets";
+import { CircleStroke } from "../../../assets/CircleStroke";
 
 export const FooterHeader = () => {
   const [isFocused, setIsFocused] = useState(false);
@@ -56,7 +57,12 @@ export const FooterHeader = () => {
     <div className="footer-header-container">
       <div className="footer-header">
         {!isFocused && !email && (
-          <label htmlFor="">Enter your email address for good</label>
+          <label htmlFor="">
+            Enter your email address for good
+            <div className="circle-stroke">
+              <CircleStroke />
+            </div>
+          </label>
         )}
 
         <input
