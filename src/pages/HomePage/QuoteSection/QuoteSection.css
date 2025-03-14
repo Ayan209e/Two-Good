@@ -29,20 +29,6 @@
   margin-right: 150px;
 }
 
-.quote-section .content .cta {
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 1em;
-  display: flex;
-  flex-direction: column;
-}
-
-.quote-section .cta-border {
-  border-bottom: 1px solid #000;
-  width: 115px;
-  margin-top: 4px;
-}
-
 @media screen and (max-width: 1200px) {
   .quote-section .content {
     margin-right: 0;
@@ -54,9 +40,5 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .quote-section .content .cta {
-    align-items: center;
   }
 }

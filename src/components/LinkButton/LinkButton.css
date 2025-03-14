@@ -1,0 +1,38 @@
+.link-button {
+  display: flex;
+  align-self: start;
+}
+
+.link-button button {
+  position: relative;
+  font-family: "helvetica";
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1em;
+  width: 100%;
+}
+
+.link-button button .link-button-hover-line {
+  position: absolute;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background-color: grey;
+  transition: all 0.3s ease;
+}
+
+.link-button button:hover .link-button-hover-line {
+  width: 0;
+  right: 0;
+}
+
+.link-button button:hover {
+  color: grey;
+}
+
+@media screen and (max-width: 768px) {
+  .link-button {
+    align-self: center;
+  }
+}
