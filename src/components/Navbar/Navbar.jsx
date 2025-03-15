@@ -42,6 +42,14 @@ const Navbar = () => {
   const { twoGoodRef, logoRef, showLogo, navRef, navLinksRef } =
     useNavLogoAnimation();
 
+  const handleNavItemClick = (item) => {
+    if (item === "Shop") {
+      window.location.href = "/shop";
+    } else if (item === "Catering") {
+      window.location.href = "/catering";
+    }
+  };
+
   return (
     <div>
       <nav ref={navRef} className={isOverlayOpen ? "overlay-open" : ""}>
@@ -60,11 +68,17 @@ const Navbar = () => {
         </div>
         <div className="nav-links">
           <div className="nav-link-items" ref={navLinksRef}>
-            <button className="nav-item">
+            <button
+              className="nav-item"
+              onClick={() => handleNavItemClick("Shop")}
+            >
               Shop
               <div className="hover-line" />
             </button>
-            <button className="nav-item">
+            <button
+              className="nav-item"
+              onClick={() => handleNavItemClick("Catering")}
+            >
               Catering
               <div className="hover-line" />
             </button>
@@ -96,6 +110,7 @@ const Navbar = () => {
         showSignInMenu={showSignInMenu}
         setShowDonationMenu={setShowDonationMenu}
         setShowSignInMenu={setShowSignInMenu}
+        toggleNavbarOverlay={toggleNavbarOverlay}
       />
     </div>
   );

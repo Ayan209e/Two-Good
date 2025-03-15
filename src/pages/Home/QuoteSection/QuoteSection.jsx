@@ -20,7 +20,7 @@ export const QuoteSection = () => {
           they find their way home again.
         </div>
 
-        <LinkButton title="Shop to support" href="/" />
+        <LinkButton title="Shop to support" href="/shop" />
       </div>
     </div>
   );

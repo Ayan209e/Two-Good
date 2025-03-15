@@ -44,7 +44,7 @@ export const ImpactSection = () => {
           nurture a sense of self-worth for those on the path of healing.
         </div>
 
-        <LinkButton href="/" title="Here's how we do it" />
+        <LinkButton href="/impact" title="Here's how we do it" />
       </div>
 
       <div className="impact-section-img">

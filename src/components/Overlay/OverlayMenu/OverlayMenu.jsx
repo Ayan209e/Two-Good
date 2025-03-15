@@ -4,7 +4,7 @@ import "./OverlayMenu.css";
 import { Underline } from "../../../assets";
 import { useSelector } from "react-redux";
 
-const OverlayMenu = ({ isOverlayOpen, handleClick, setShowDonationMenu }) => {
+const OverlayMenu = ({ isOverlayOpen, handleClick }) => {
   const menuItemsRef = useRef([]);
   const isLoggedIn = useSelector((state) => state.userStore.isLoggedIn);
 

@@ -12,6 +12,7 @@ const Overlay = ({
   showSignInMenu,
   setShowDonationMenu,
   setShowSignInMenu,
+  toggleNavbarOverlay,
 }) => {
   const dispatch = useDispatch();
   const handleDonationFlow = () => {
@@ -27,20 +28,25 @@ const Overlay = ({
     window.location.href = "/";
   };
 
+  const handleRedirection = (href) => {
+    toggleNavbarOverlay();
+    window.location.href = href;
+  };
+
   const handleClick = (item) => {
     console.log(item);
     const lowerCaseItem = item.toLowerCase();
     const navigationMap = {
-      shop: () => (window.location.href = "shop"),
-      catering: () => (window.location.href = "catering"),
-      impact: () => (window.location.href = "impact"),
-      stories: () => (window.location.href = "stories"),
-      about: () => (window.location.href = "about"),
-      contact: () => (window.location.href = "contact"),
+      shop: () => handleRedirection("/shop"),
+      catering: () => handleRedirection("/catering"),
+      impact: () => handleRedirection("/impact"),
+      stories: () => handleRedirection("/stories"),
+      about: () => handleRedirection("/about"),
+      contact: () => handleRedirection("/contact"),
       donate: handleDonationFlow,
       "sign in": handleSignInFlow,
       "log out": handleLogOut,
-      default: () => (window.location.href = "/"),
+      default: () => handleRedirection("/"),
     };
 
     (navigationMap[lowerCaseItem] || navigationMap.default)();
