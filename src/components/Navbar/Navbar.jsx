@@ -1,29 +1,42 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./Navbar.css";
 import { TwoGood, Logo, CartIcon } from "../../assets";
 import useNavLogoAnimation from "../../hooks/useNavLogoAnimation";
 import Overlay from "../Overlay/Overlay";
+import {
+  toggleOverlay,
+  toggleNavbarMenuList,
+  toggleShowDonationMenu,
+} from "../../store/action";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
+  const { isOverlayOpen, isNavMenuListOpen, showDonationMenu } = useSelector(
+    (state) => state.brandStore
+  );
+
   const cartHasItem = false;
-  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showDonationMenu, setShowDonationMenu] = useState(false);
   const [showSignInMenu, setShowSignInMenu] = useState(false);
-  const toggleOverlay = () => {
-    setIsOverlayOpen(!isOverlayOpen);
+
+  const setShowDonationMenu = (val) => {
+    dispatch(toggleShowDonationMenu(val));
+  };
+
+  const toggleNavbarOverlay = () => {
+    dispatch(toggleOverlay(!isOverlayOpen));
   };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    dispatch(toggleNavbarMenuList(!isNavMenuListOpen));
     setShowDonationMenu(false);
     setShowSignInMenu(false);
-    toggleOverlay();
+    toggleNavbarOverlay();
   };
 
   const toggleDonateMenu = () => {
     setShowDonationMenu(true);
-    toggleOverlay();
+    toggleNavbarOverlay();
   };
 
   const { twoGoodRef, logoRef, showLogo, navRef, navLinksRef } =

@@ -10,7 +10,7 @@ const CaretUp = () => {
       xmlns="http://www.w3.org/2000/svg"
       className="go593106169"
     >
-      <path d="m2.832 3.429 16 14.769 16-14.77" stroke-width="7"></path>
+      <path d="m2.832 3.429 16 14.769 16-14.77" strokeWidth="7"></path>
     </svg>
   );
 };
