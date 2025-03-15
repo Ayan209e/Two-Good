@@ -1,29 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ShopHeader.css";
 import { CaretUp, Underline } from "../../../assets";
 import { ShopHeaderOverlay } from "./ShopHeaderOverlay";
-import { getShopHeaderTextByPath } from "../../../utils/shop.utils";
+import { useShopHeader } from "./useShopHeader";
 
 export const ShopHeader = () => {
-  const pathName = window.location.pathname;
-  let headerTitle = pathName.replace("/shop/", "").toUpperCase();
-  if (headerTitle === "/SHOP" || headerTitle === "/SHOP/")
-    headerTitle = "THINGS";
-  const headerText = getShopHeaderTextByPath(pathName);
-
-  const [headerOverlay, setHeaderOverlay] = useState(false);
-
-  const toggleOverlay = () => {
-    setHeaderOverlay(!headerOverlay);
-    document.body.classList.toggle("shop-header-overlay-open", !headerOverlay);
-  };
+  const {
+    headerText,
+    headerTitle,
+    headerOverlay,
+    toggleOverlay,
+    goodRef,
+    titleRef,
+    headerTextRef,
+  } = useShopHeader();
 
   return (
     <div className="shop-header">
       <div className="shop-header-title">
-        <div>Good</div>
-        <div className="shop-header-overlay-trigger">
+        <div ref={goodRef}>Good</div>
+        <div className="shop-header-overlay-trigger" ref={titleRef}>
           <div>{headerTitle}</div>
+
           <div
             className={`caret-icon ${headerOverlay ? "flipped" : ""}`}
             onClick={() => toggleOverlay()}
@@ -41,7 +39,9 @@ export const ShopHeader = () => {
         </div>
       </div>
 
-      <div className="shop-header-text">{headerText}</div>
+      <div className="shop-header-text" ref={headerTextRef}>
+        {headerText}
+      </div>
     </div>
   );
 };
