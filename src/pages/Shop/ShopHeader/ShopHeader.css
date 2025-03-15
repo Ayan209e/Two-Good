@@ -1,0 +1,137 @@
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.shop-header-title {
+  font-size: min(max(3.5rem, 10vw), 200px);
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  white-space: pre-wrap;
+  font-family: "futura";
+  font-weight: 500;
+  color: black;
+  z-index: 100;
+  background-color: white;
+}
+
+.shop-header-overlay-trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  z-index: 100000;
+  background-color: white;
+}
+
+.caret-icon {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.caret-icon.flipped {
+  transform: rotateX(180deg);
+}
+
+.caret-icon svg {
+  height: 80px;
+  width: 150px;
+  transition: all 0.3s ease;
+}
+
+.shop-header-underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shop-header-underline svg {
+  width: 100%;
+}
+
+.shop-header-title:hover .shop-header-underline {
+  width: 100%;
+  opacity: 1;
+}
+
+.shop-header-text {
+  font-family: "helvetica";
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 350px;
+}
+
+/* Shop Header Overlay */
+.shop-header-overlay {
+  position: absolute;
+  background-color: #ffffff60;
+  top: 120%;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  margin-left: -24px;
+  backdrop-filter: blur(0px);
+  display: flex;
+  padding: 0 24px;
+  z-index: -10;
+  opacity: 0;
+}
+
+.shop-header-overlay-content {
+  width: 100%;
+  height: fit-content;
+  transition: all 0.3s ease;
+}
+
+.shop-header-overlay-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: fit-content;
+}
+
+.shop-header-overlay-content ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.shop-header-overlay-content ul li .overlay-underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shop-header-overlay-content li svg {
+  width: 100%;
+}
+
+.shop-header-overlay-content li:hover .overlay-underline {
+  width: 100%;
+  opacity: 1;
+}

@@ -1,11 +1,11 @@
 import React from "react";
 
-const CaretUp = () => {
+const CaretUp = ({ stroke = "white" }) => {
   return (
     <svg
       width="38"
       fill="none"
-      stroke="white"
+      stroke={stroke}
       viewBox="0 0 38 23"
       xmlns="http://www.w3.org/2000/svg"
       className="go593106169"

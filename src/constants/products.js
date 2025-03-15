@@ -1,4 +1,4 @@
-// Categories - bath, pantry, pre-sale, donation, home, gift
+// Categories - bath, pantry, pre-sale, donations, home, gift
 
 export const products = [
   {
@@ -124,7 +124,7 @@ export const products = [
   {
     name: "donate a meal to a women's shelter",
     price: "10",
-    category: "donation",
+    category: "donations",
     href: "/donate-meal-to-womens-shelter",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/191fb1c3aff66e559d8bf9933f54bcd85d33ede5-1455x1455.png/Donate-a-meal-to-womens-shelter-two-good-co.png?w=640&h=640&auto=format",
@@ -133,7 +133,7 @@ export const products = [
     name: "donate a love+ care pack",
     href: "/donate-a-love-and-care-pack",
     price: "50",
-    category: "donation",
+    category: "donations",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=640&h=640&auto=format",
   },
@@ -142,7 +142,7 @@ export const products = [
     name: "donate 10 meals to a women's shelter",
     href: "/donate-10-meals-to-womens-shelter",
     price: "100",
-    category: "donation",
+    category: "donations",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/824570b2e84d0680e91d6f8dddd97a06a7f349d2-2748x2748.png/Donate-10-meals-to-womens-shelter-two-good-co.png?w=640&h=640&auto=format",
   },
@@ -150,7 +150,7 @@ export const products = [
     name: "donate a good hair day pack",
     href: "/donate-a-good-hair-day-pack",
     price: "80",
-    category: "donation",
+    category: "donations",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/5ab8af5cab3341a0f327e6959ed036ecbe3dffea-5000x5000.png/Good-Hair-Day-Pack-Expanded-Two-Good-Co.png?w=640&h=640&auto=format",
   },
@@ -158,7 +158,7 @@ export const products = [
     name: "donate 20 meals to a women's shelter",
     href: "/donate-20-meals-to-womens-shelter",
     price: "2,00",
-    category: "donation",
+    category: "donations",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/3dab242fa3387f3fc93a1663d944ff8fab1d00a7-2900x2900.png/Donate-20-meals-womens-shelter-two-good-co.png?w=640&h=640&auto=format",
   },
@@ -166,7 +166,7 @@ export const products = [
     name: "donate 100 meals to a women's shelter",
     href: "/donate-100-meals-to-womens-shelter",
     price: "1000",
-    category: "donation",
+    category: "donations",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/5708a06a5c62e6ecd938d42647888efd72bc5907-1408x1407.png/Donate-100-meals-to-womens-shelter-two-good-co.png?rect=1,0,1407,1407&w=640&h=640&auto=format",
   },
@@ -262,7 +262,7 @@ export const products = [
     name: "the good night's sleep care pack",
     href: "/the-good-nights-sleep-care-pack",
     price: "125",
-    category: "gift",
+    category: "gift-packs",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/5ff174456e7f3a000b5bcdd6768155d29570c39b-5000x5000.png/Good-Nights-Sleep-Pack-Expanded-Two-Good-Co.png?w=640&h=640&auto=format",
   },
@@ -270,7 +270,7 @@ export const products = [
     name: "the good hair day pack",
     href: "/the-good-hair-day-pack",
     price: "80",
-    category: "gift",
+    category: "gift-packs",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/5ab8af5cab3341a0f327e6959ed036ecbe3dffea-5000x5000.png/Good-Hair-Day-Pack-Expanded-Two-Good-Co.png?w=640&h=640&auto=format",
   },
@@ -278,7 +278,7 @@ export const products = [
     name: "the love+ care pack",
     href: "/the-love-and-care-pack",
     price: "50",
-    category: "gift",
+    category: "gift-packs",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/d6a2a4be8e3063d64648773f57f5f447609a93ab-5000x5000.png/Love-Care-Pack-Expanded-Two-Good-Co.png?w=640&h=640&auto=format",
   },
@@ -286,7 +286,7 @@ export const products = [
     name: "gift message",
     href: "/personalised-card",
     price: "5",
-    category: "gift",
+    category: "gift-packs",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/55cf0869df62b00e47049a7d6011d07deebde040-5000x5000.png/Website%20Products%20(14).png?w=640&h=640&auto=format",
   },
