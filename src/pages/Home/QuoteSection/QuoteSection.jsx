@@ -1,15 +1,59 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./QuoteSection.css";
 import { LinkButton } from "../../../components/LinkButton/LinkButton";
+import gsap from "gsap";
 
 export const QuoteSection = () => {
+  const headingRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (headingRef.current) {
+      gsap.fromTo(
+        headingRef.current,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          delay: 0.3,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: headingRef.current,
+            start: "top 100%", // Start animation when 100% of card is in view
+            toggleActions: "play none none none", // Only play once
+          },
+        }
+      );
+    }
+
+    if (contentRef.current) {
+      gsap.fromTo(
+        contentRef.current,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          delay: 0.3,
+          duration: 0.3,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: contentRef.current,
+            start: "top 100%", // Start animation when 80% of card is in view
+            toggleActions: "play none none none", // Only play once
+          },
+        }
+      );
+    }
+  }, []);
+
   return (
     <div className="quote-section">
-      <div className="heading">
+      <div className="heading" ref={headingRef}>
         We believe in people, until they believe in themselves again.
       </div>
 
-      <div className="content">
+      <div className="content" ref={contentRef}>
         <div>
           Everything we do is designed to rebuild self worth and independence,
           in order to break free from the cycle of disadvantage.
