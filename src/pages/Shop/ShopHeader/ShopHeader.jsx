@@ -20,7 +20,7 @@ export const ShopHeader = () => {
       <div className="shop-header-title">
         <div ref={goodRef}>Good</div>
         <div className="shop-header-overlay-trigger" ref={titleRef}>
-          <div>{headerTitle}</div>
+          <div onClick={() => toggleOverlay()}>{headerTitle}</div>
 
           <div
             className={`caret-icon ${headerOverlay ? "flipped" : ""}`}
