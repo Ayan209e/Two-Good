@@ -1,63 +1,30 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import "./FooterHeader.css";
 import { ArrowRight, Enter } from "../../../assets";
 import { CircleStroke } from "../../../assets/CircleStroke";
+import { useFooterHeader } from "./useFooterHeader";
 
 export const FooterHeader = () => {
-  const [isFocused, setIsFocused] = useState(false);
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [email, setEmail] = useState("");
-  const inputRef = useRef(null);
-
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    if (!email) {
-      setIsFocused(false);
-    }
-  };
-
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      setError(true);
-      setSuccess(false);
-      return;
-    }
-
-    setSuccess(true);
-    setError(false);
-    setEmail("");
-    setIsFocused(false);
-    if (inputRef.current) {
-      inputRef.current.blur();
-    }
-
-    setTimeout(() => {
-      setSuccess(false);
-    }, 2000);
-  };
-
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleSubmit(e);
-    }
-  };
+  const {
+    isFocused,
+    error,
+    success,
+    email,
+    inputRef,
+    labelRef,
+    buttonRef,
+    handleFocus,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    handleKeyPress,
+  } = useFooterHeader();
 
   return (
     <div className="footer-header-container">
       <div className="footer-header">
         {!isFocused && !email && (
-          <label htmlFor="">
+          <label htmlFor="email" ref={labelRef}>
             Enter your email address for good
             <div className="circle-stroke">
               <CircleStroke />
@@ -76,13 +43,15 @@ export const FooterHeader = () => {
           onKeyPress={handleKeyPress}
         />
 
-        <button onClick={handleSubmit}>
+        <button onClick={handleSubmit} ref={buttonRef}>
           {isFocused || email ? <Enter /> : <ArrowRight />}
         </button>
       </div>
 
       {error && (
-        <div className="error">Whoops! Check if your email is correct</div>
+        <div className="error">
+          Whoops! Check if your email is correct
+        </div>
       )}
 
       {success && (

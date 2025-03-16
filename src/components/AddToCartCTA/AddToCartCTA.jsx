@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AddToCartCTA.css";
 
-export const AddToCartCTA = ({ price, highlight }) => {
+export const AddToCartCTA = ({ price, highlight, ref }) => {
   const [quantity, setQuantity] = useState(1);
   const toggleQuantity = (increment) => {
     if (increment && quantity < 99) {
@@ -18,7 +18,7 @@ export const AddToCartCTA = ({ price, highlight }) => {
   };
 
   return (
-    <div className="add-to-cart-cta-wrapper">
+    <div className="add-to-cart-cta-wrapper" ref={ref}>
       <div className="add-to-cart-cta">
         <div className="qty-picker">
           <div onClick={() => toggleQuantity(false)}>-</div>
