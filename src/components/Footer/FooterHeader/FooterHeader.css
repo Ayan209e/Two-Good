@@ -26,6 +26,7 @@
   top: 0;
   z-index: 1;
   left: 0;
+  margin-right: 30px;
 }
 
 .footer-header input {
@@ -67,7 +68,7 @@
   font-weight: 400;
 }
 
-.footer-header .circle-stroke{
+.footer-header .circle-stroke {
   position: absolute;
   top: -32px;
   right: -32px;
@@ -95,6 +96,12 @@
   .footer-header-container .success {
     font-size: 16px;
   }
+
+  .footer-header .circle-stroke {
+    top: -20px;
+    right: -24px;
+    width: 130px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -113,5 +120,17 @@
 
   .footer-header label {
     font-size: 16px;
+  }
+
+  .footer-header .circle-stroke {
+    top: -12px;
+    right: -14px;
+    width: 80px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-header .circle-stroke {
+    display: none;
   }
 }
