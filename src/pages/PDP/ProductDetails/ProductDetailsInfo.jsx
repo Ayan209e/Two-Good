@@ -12,6 +12,7 @@ export const ProductDetailsInfo = ({ product }) => {
   const infoRef = useRef(null);
   const ingredientRef = useRef(null);
   const materialRef = useRef(null);
+  const containsRef = useRef(null);
   const nittyRef = useRef(null);
 
   useEffect(() => {
@@ -44,6 +45,19 @@ export const ProductDetailsInfo = ({ product }) => {
     if (materialRef.current) {
       gsap.fromTo(
         materialRef.current,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          delay: 0.3,
+          ease: "power3.out",
+        }
+      );
+    }
+    if (containsRef.current) {
+      gsap.fromTo(
+        containsRef.current,
         { opacity: 0, y: 100 },
         {
           opacity: 1,
@@ -121,6 +135,17 @@ export const ProductDetailsInfo = ({ product }) => {
           <div className="product-info-container-title">Material</div>
           <div className="product-info-container-ingredients">
             <div>{product.material.primary}</div>
+          </div>
+        </div>
+      )}
+
+      {product.contains && (
+        <div className="product-info-container" ref={containsRef}>
+          <div className="product-info-container-title">Contains</div>
+          <div className="product-info-container-content">
+            {product.contains.map((item, index) => (
+              <div key={index}>{item}</div>
+            ))}
           </div>
         </div>
       )}

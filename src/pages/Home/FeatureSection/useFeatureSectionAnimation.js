@@ -7,6 +7,42 @@ export const useFeatureSectionAnimation = () => {
   const ctaRef = useRef(null);
 
   useEffect(() => {
+    if (containerRef.current) {
+      gsap.fromTo(
+        containerRef.current,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+
+    if (imgRef.current) {
+      gsap.fromTo(
+        imgRef.current,
+        { opacity: 0, scale: 0 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+
     const container = containerRef.current;
     const img = imgRef.current;
     const cta = ctaRef.current;
@@ -37,5 +73,4 @@ export const useFeatureSectionAnimation = () => {
   }, []);
 
   return { containerRef, imgRef, ctaRef };
-
 };

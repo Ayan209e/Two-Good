@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const ProductSectionCards = ({ imgSrc, title, price, href = "/" }) => {
   const handleClick = () => {
-    window.location.href = href;
+    window.location.href = `/product${href}`;
   };
 
   const cardRef = useRef(null);
@@ -33,7 +33,7 @@ export const ProductSectionCards = ({ imgSrc, title, price, href = "/" }) => {
 
   return (
     <div className="product-section-cards" onClick={handleClick} ref={cardRef}>
-      <img src={`/assets/${imgSrc}`} alt={title} />
+      <img src={imgSrc} alt={title} />
 
       <div className="product-section-cards-info">
         <div>{title}</div>

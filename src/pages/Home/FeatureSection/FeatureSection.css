@@ -1,14 +1,15 @@
-.feature-section{
-    margin-bottom: 24px;
+.feature-section {
+  margin-bottom: 24px;
 }
 
 .feature-product-card {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 150%;
   justify-content: center;
   align-items: center;
   position: relative;
+  min-height: 500px;
 }
 
 .feature-product-card img {
@@ -19,7 +20,7 @@
 
 .feature-product-card .cta {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -34,6 +35,7 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
+  margin-top: 64px;
 }
 
 @media (max-width: 800px) {

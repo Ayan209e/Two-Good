@@ -19,7 +19,6 @@ export const FeatureProductCard = ({
   rightTitle,
   leftHref = "/",
   rightHref = "/",
-  headerHref = "/",
 }) => {
   const handleClick = () => {
     window.location.href = href;
@@ -28,12 +27,8 @@ export const FeatureProductCard = ({
   const { containerRef, imgRef, ctaRef } = useFeatureSectionAnimation();
 
   return (
-    <div
-      className="feature-product-card"
-      onClick={handleClick}
-      ref={containerRef}
-    >
-      <img src={`/assets/${image}`} alt="product" ref={imgRef} />
+    <div className="feature-product-card" ref={containerRef}>
+      <img src={image} alt={heading} ref={imgRef} onClick={handleClick} />
 
       <div className="cta" ref={ctaRef}>
         <ExpandableProductCTA
@@ -46,7 +41,7 @@ export const FeatureProductCard = ({
           rightTitle={rightTitle}
           leftHref={leftHref}
           rightHref={rightHref}
-          headerHref={headerHref}
+          headerHref={href}
         />
       </div>
     </div>

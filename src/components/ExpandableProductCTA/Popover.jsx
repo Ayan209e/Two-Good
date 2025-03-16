@@ -12,10 +12,11 @@ export const Popover = ({
   rightHref,
 }) => {
   const handleRightItemClick = () => {
-    window.location.href = rightHref;
+    window.location.href = `/product${rightHref}`;
   };
+  
   const handleLeftItemClick = () => {
-    window.location.href = leftHref;
+    window.location.href = `/product${leftHref}`;
   };
 
   return (
@@ -24,11 +25,11 @@ export const Popover = ({
       style={{ backgroundColor: secondaryColor }}
     >
       <div className="popover-item" onClick={handleLeftItemClick}>
-        <img src={`/assets/${leftImg}`} alt={leftTitle} />
+        <img src={leftImg} alt={leftTitle} />
         <div>{leftTitle}</div>
       </div>
       <div className="popover-item" onClick={handleRightItemClick}>
-        <img src={`/assets/${rightImg}`} alt={leftTitle} />
+        <img src={rightImg} alt={leftTitle} />
         <div>{rightTitle}</div>
       </div>
     </div>

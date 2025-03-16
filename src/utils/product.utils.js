@@ -17,3 +17,8 @@ export const getShuffledProducts = () => {
 export const getProductsByCategory = (category) => {
   return products.filter((product) => product.category === category);
 };
+
+// Function to return products based on slug.href
+export const getProductBySlug = (slug) => {
+  return products.filter((product) => product.href === slug)[0];
+};

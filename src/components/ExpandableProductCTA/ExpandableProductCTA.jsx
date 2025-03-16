@@ -26,11 +26,11 @@ export const ExpandableProductCTA = ({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="expandable-product-cta-container"
-      onClick={handleClick}
     >
       <div
         className="expandable-product-cta-bar"
         style={{ backgroundColor: primaryColor }}
+        onClick={handleClick}
       >
         <div className="dot" />
 
