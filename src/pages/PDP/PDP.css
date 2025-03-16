@@ -1,9 +1,9 @@
-.pdp{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 64px;
-    width: 100%;
-    min-height: 100vh;
+.pdp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  width: 100%;
+  min-height: 100vh;
 }

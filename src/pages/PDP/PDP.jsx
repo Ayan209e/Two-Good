@@ -12,7 +12,7 @@ export const PDP = () => {
   return (
     <div className="pdp">
       <ProductDetails product={product} />
-      <PDPImpactSection />
+      <PDPImpactSection category={product.category} name={product.name} />
     </div>
   );
 };
