@@ -32,12 +32,12 @@ export const AddToCartCTA = ({ price, highlight, ref }) => {
       </div>
 
       <div className="slide-in-component">
-        {Array(10).fill(
-          <h1>
+        {Array.from({ length: 10 }, (_, index) => (
+          <h1 key={index}>
             <div className="bullet" />
             {highlight}
           </h1>
-        )}
+        ))}
       </div>
     </div>
   );
