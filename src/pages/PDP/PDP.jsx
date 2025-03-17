@@ -4,6 +4,7 @@ import { products } from "../../constants/products";
 import { ProductDetails } from "./ProductDetails/ProductDetails";
 import "./PDP.css";
 import { PDPImpactSection } from "./PDPImpactSection/PDPImpactSection";
+import { PDPImageSection } from "./PDPImageSection/PDPImageSection";
 
 export const PDP = () => {
   const { slug } = useParams();
@@ -12,6 +13,7 @@ export const PDP = () => {
   return (
     <div className="pdp">
       <ProductDetails product={product} />
+      <PDPImageSection product={product} />
       <PDPImpactSection category={product.category} name={product.name} />
     </div>
   );

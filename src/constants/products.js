@@ -394,10 +394,6 @@ export const products = [
       "https://cdn.sanity.io/images/w8f1ak3c/production/eded3c54597466f7852e29e16363c5dc75c2f523-5000x3566.png/9.png?w=1600&h=1141&auto=format",
       "https://cdn.sanity.io/images/w8f1ak3c/production/d922a74d8e51d9b9af03a4ca4be834972485a561-5000x5000.png/15.png?w=1600&h=1600&auto=format",
       "https://cdn.sanity.io/images/w8f1ak3c/production/d9455fdf4cc5963b768cb617454a16765cc86fd1-1667x2500.jpg/CDE_0165_LR.jpg?w=1600&h=2400&auto=format",
-      "https://cdn.sanity.io/images/w8f1ak3c/production/8831d31305dc662dbeabb31408759240cb735681-3000x5000.png/3.png?rect=0,49,3000,4853&fp-x=0.5&fp-y=0.5012244897959184&w=1600&h=1939&fit=crop&crop=focalpoint&auto=format",
-      "https://cdn.sanity.io/images/w8f1ak3c/production/8831d31305dc662dbeabb31408759240cb735681-3000x5000.png/3.png?rect=0,49,3000,4853&fp-x=0.5&fp-y=0.5012244897959184&w=1600&h=1939&fit=crop&crop=focalpoint&auto=format",
-      "https://cdn.sanity.io/images/w8f1ak3c/production/8831d31305dc662dbeabb31408759240cb735681-3000x5000.png/3.png?rect=0,49,3000,4853&fp-x=0.5&fp-y=0.5012244897959184&w=1600&h=1939&fit=crop&crop=focalpoint&auto=format",
-      "https://cdn.sanity.io/images/w8f1ak3c/production/8831d31305dc662dbeabb31408759240cb735681-3000x5000.png/3.png?rect=0,49,3000,4853&fp-x=0.5&fp-y=0.5012244897959184&w=1600&h=1939&fit=crop&crop=focalpoint&auto=format",
     ],
   },
   {
