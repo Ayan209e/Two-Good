@@ -18,14 +18,14 @@ export const PDPImageSection = ({ product }) => {
       {firstTwoImages.length > 0 && (
         <div className="first-two-images">
           {firstTwoImages.map((image) => (
-            <PDPImage image={image} />
+            <PDPImage image={image} key={image} />
           ))}
         </div>
       )}
 
       {thirdImage && (
         <div className="third-image">
-          <PDPImage image={thirdImage} />
+          <PDPImage image={thirdImage} key="third" />
         </div>
       )}
 
@@ -35,6 +35,7 @@ export const PDPImageSection = ({ product }) => {
         <div className="remaining-images">
           {remainingImages.map((image, index) => (
             <PDPImage
+              key={image} 
               image={image}
               className={index % 2 === 0 ? "left" : "right"}
             />

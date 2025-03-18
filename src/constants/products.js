@@ -596,8 +596,6 @@ export const products = [
       "https://cdn.sanity.io/images/w8f1ak3c/production/f5d642a7a841a87f8315e60805e30b2adf61783e-3000x2000.png/3.png?rect=1,0,2999,2000&w=1600&h=1067&auto=format",
       "https://cdn.sanity.io/images/w8f1ak3c/production/4e69ed7258b0987e8a12cac1f23c223a95f260f7-3000x2000.png/4.png?rect=1,0,2999,2000&w=1600&h=1067&auto=format",
       "https://cdn.sanity.io/images/w8f1ak3c/production/acf86aeb8582b3722f9dd7e3bf4e30bc90028ad6-3000x1461.png/Change-The-Course-Cookbook-TGC.png?w=1600&h=779&auto=format",
-      "https://cdn.sanity.io/images/w8f1ak3c/production/acf86aeb8582b3722f9dd7e3bf4e30bc90028ad6-3000x1461.png/Change-The-Course-Cookbook-TGC.png?w=1600&h=779&auto=format",
-      "https://cdn.sanity.io/images/w8f1ak3c/production/acf86aeb8582b3722f9dd7e3bf4e30bc90028ad6-3000x1461.png/Change-The-Course-Cookbook-TGC.png?w=1600&h=779&auto=format",
     ],
   },
   {

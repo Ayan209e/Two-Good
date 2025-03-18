@@ -1,0 +1,36 @@
+.recommended-products {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  padding: 64px 24px;
+}
+
+.recommended-products-title {
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 0.9em;
+    font-family: "futura";
+}
+
+.recommended-product-card {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .recommended-products {
+     padding: 0 24px;
+     padding-top: 32px;
+     text-align: center;
+     gap: 4px;
+  }
+
+  .recommended-products-title {
+    font-size: 24px;
+  }
+    
+}

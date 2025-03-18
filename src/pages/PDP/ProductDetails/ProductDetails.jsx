@@ -3,7 +3,7 @@ import "./ProductDetails.css";
 import { ProductDetailsFooter } from "./ProductDetailsFooter";
 import { ProductDetailsTitle } from "./ProductDetailsTitle";
 import { ProductDetailsInfo } from "./ProductDetailsInfo";
-import { getPdpBackgroundColor } from "../../../constants/pdp";
+import { getPdpBackgroundColor } from "../../../utils/pdp.utils";
 import gsap from "gsap";
 
 export const ProductDetails = ({ product }) => {
