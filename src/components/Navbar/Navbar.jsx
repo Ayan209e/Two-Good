@@ -16,7 +16,8 @@ const Navbar = () => {
     (state) => state.brandStore
   );
 
-  const cartHasItem = false;
+  const cart = useSelector((state) => state.cartStore);
+  const cartHasItem = cart.products.length > 0;
   const [showSignInMenu, setShowSignInMenu] = useState(false);
 
   const setShowDonationMenu = (val) => {
