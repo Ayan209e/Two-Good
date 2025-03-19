@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./AddToCartCTA.css";
 import { addProductToCart } from "../../store/action";
+import { formatPrice } from "../../utils/cart.utils";
 
 export const AddToCartCTA = ({ price, highlight, ref, productId }) => {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ export const AddToCartCTA = ({ price, highlight, ref, productId }) => {
           <div onClick={() => toggleQuantity(true)}>+</div>
         </div>
 
-        <div className="price">${price}</div>
+        <div className="price">${formatPrice(price)}</div>
 
         <div className="cta-button" onClick={handleAddToCart}>
           {productAdded ? "Added" : "Add to cart"}

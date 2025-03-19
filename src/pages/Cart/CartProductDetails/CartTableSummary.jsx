@@ -5,6 +5,7 @@ import { CartTableSeparator } from "./CartTableSeparator";
 import ArrowRight from "../../../assets/ArrowRight";
 import { addGiftCard, removeGiftCard } from "../../../store/action";
 import gsap from "gsap";
+import { formatPrice } from "../../../utils/cart.utils";
 
 export const CartTableSummary = () => {
   const dispatch = useDispatch();
@@ -72,12 +73,14 @@ export const CartTableSummary = () => {
 
             <div className="cart-table-summary-content-row">
               <h1>Delivery</h1>
-              <h2 className="shipping-message">Shipping calculated at check-out.</h2>
+              <h2 className="shipping-message">
+                Shipping calculated at check-out.
+              </h2>
             </div>
 
             <div className="cart-table-summary-content-row">
               <h1>Subtotal</h1>
-              <h2 className="subtotal">${subTotal}</h2>
+              <h2 className="subtotal">${formatPrice(subTotal)}</h2>
             </div>
           </div>
 

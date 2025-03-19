@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./ProductCard.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { formatPrice } from "../../utils/cart.utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,7 +59,7 @@ export const ProductCard = ({ product, quote = "" }) => {
       <div className="product-card" ref={cardRef}>
         <img src={product.image} alt={product.name} className="product-image" />
         <h3 className="product-title">{product.name}</h3>
-        <p className="product-price">${product.price}</p>
+        <p className="product-price">${formatPrice(product.price)}</p>
       </div>
     </a>
   );

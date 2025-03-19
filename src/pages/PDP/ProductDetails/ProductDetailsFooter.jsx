@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import { formatPrice } from "../../../utils/cart.utils";
 
 export const ProductDetailsFooter = ({ price, highlight }) => {
   const leftRef = useRef(null);
@@ -52,7 +53,7 @@ export const ProductDetailsFooter = ({ price, highlight }) => {
     <div className="product-details-footer">
       <div className="product-details-footer-border" ref={borderRef} />
       <div className="product-details-footer-content">
-        <div ref={leftRef}>${price}</div>
+        <div ref={leftRef}>${formatPrice(price)}</div>
         <div ref={rightRef}>{highlight}</div>
       </div>
     </div>

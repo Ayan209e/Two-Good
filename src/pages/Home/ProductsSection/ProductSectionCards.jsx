@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./ProductsSection.css";
+import { formatPrice } from "../../../utils/cart.utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ export const ProductSectionCards = ({ imgSrc, title, price, href = "/" }) => {
 
       <div className="product-section-cards-info">
         <div>{title}</div>
-        <div className="price">{price}</div>
+        <div className="price">{formatPrice(price)}</div>
       </div>
     </div>
   );

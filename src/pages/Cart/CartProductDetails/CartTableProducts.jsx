@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProductBySlug } from "../../../utils/product.utils";
 import { removeProductFromCart, updateProductQuantity } from "../../../store/action";
 import gsap from "gsap";
+import { formatPrice } from "../../../utils/cart.utils";
 
 export const CartTableProducts = () => {
   const cart = useSelector((state) => state.cartStore);
@@ -76,9 +77,9 @@ export const CartTableProductCard = ({ product }) => {
           <div onClick={() => toggleQuantity(true)}>+</div>
         </div>
 
-        <div className="min-width">${product.price}</div>
+        <div className="min-width">${formatPrice(product.price)}</div>
 
-        <div className="min-width amount">${amount}</div>
+        <div className="min-width amount">${formatPrice(amount)}</div>
 
         <div className="cross-icon" onClick={removeProduct}>
           X
