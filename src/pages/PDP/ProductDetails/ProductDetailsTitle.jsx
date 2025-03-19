@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { AddToCartCTA } from "../../../components/AddToCartCTA/AddToCartCTA";
 import gsap from "gsap";
 
-export const ProductDetailsTitle = ({ price, highlight, name }) => {
+export const ProductDetailsTitle = ({ price, highlight, name, productId }) => {
   const titleRef = useRef(null);
   const cartRef = useRef(null);
 
@@ -39,7 +39,12 @@ export const ProductDetailsTitle = ({ price, highlight, name }) => {
   return (
     <div className="product-details-title">
       <h1 ref={titleRef}>{name}</h1>
-      <AddToCartCTA price={price} highlight={highlight} ref={cartRef} />
+      <AddToCartCTA
+        price={price}
+        highlight={highlight}
+        ref={cartRef}
+        productId={productId}
+      />
     </div>
   );
 };

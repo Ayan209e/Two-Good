@@ -7,7 +7,7 @@ import { getPdpBackgroundColor } from "../../../utils/pdp.utils";
 import gsap from "gsap";
 
 export const ProductDetails = ({ product }) => {
-  const { name, price, image, highlight } = product;
+  const { name, price, image, highlight, href } = product;
   const backgroundColor = getPdpBackgroundColor(product.category);
 
   const imgRef = useRef(null);
@@ -34,7 +34,7 @@ export const ProductDetails = ({ product }) => {
       style={{ backgroundColor: backgroundColor }}
     >
       <div className="product-details">
-        <ProductDetailsTitle name={name} price={price} highlight={highlight} />
+        <ProductDetailsTitle name={name} price={price} highlight={highlight} productId={href} />
 
         <div className="image" ref={imgRef}>
           <img src={image} alt={name} />

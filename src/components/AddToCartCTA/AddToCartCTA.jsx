@@ -1,8 +1,16 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./AddToCartCTA.css";
+import { addProductToCart } from "../../store/action";
 
-export const AddToCartCTA = ({ price, highlight, ref }) => {
+export const AddToCartCTA = ({ price, highlight, ref, productId }) => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cartStore);
   const [quantity, setQuantity] = useState(1);
+  const [productAdded, setProductAdded] = useState(false);
+
+  console.log("cart -", cart);
+
   const toggleQuantity = (increment) => {
     if (increment && quantity < 99) {
       setQuantity(quantity + 1);
@@ -14,7 +22,9 @@ export const AddToCartCTA = ({ price, highlight, ref }) => {
   };
 
   const handleAddToCart = () => {
-    // Add To Cart Logic
+    setProductAdded(true);
+    const product = { id: productId, quantity, price };
+    dispatch(addProductToCart(product));
   };
 
   return (
@@ -28,7 +38,9 @@ export const AddToCartCTA = ({ price, highlight, ref }) => {
 
         <div className="price">${price}</div>
 
-        <div onClick={handleAddToCart}>Add to cart</div>
+        <div className="cta-button" onClick={handleAddToCart}>
+          {productAdded ? "Added" : "Add to cart"}
+        </div>
       </div>
 
       <div className="slide-in-component">

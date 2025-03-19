@@ -489,7 +489,7 @@ export const products = [
   {
     name: "donate 20 meals to a women's shelter",
     href: "/donate-20-meals-to-womens-shelter",
-    price: "2,00",
+    price: "200",
     category: "donations",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/3dab242fa3387f3fc93a1663d944ff8fab1d00a7-2900x2900.png/Donate-20-meals-womens-shelter-two-good-co.png?w=640&h=640&auto=format",

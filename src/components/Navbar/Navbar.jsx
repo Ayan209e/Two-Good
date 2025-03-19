@@ -98,7 +98,7 @@ const Navbar = () => {
               <span className="upper"></span>
               <span className="lower"></span>
             </button>
-            <button className="cart">
+            <button className="cart" onClick={() => window.location.href = "/cart"}>
               <CartIcon cartHasItem={cartHasItem} />
             </button>
           </div>

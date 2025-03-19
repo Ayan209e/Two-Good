@@ -24,6 +24,13 @@
   position: relative;
 }
 
+.add-to-cart-cta .cta-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+}
+
 /* Quantity Picker */
 .add-to-cart-cta .qty-picker {
   display: flex;

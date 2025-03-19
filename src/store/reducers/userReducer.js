@@ -1,4 +1,7 @@
-import { SET_IS_LOGGED_IN, SET_USER_EMAIL } from "../action.types";
+import {
+  SET_IS_LOGGED_IN,
+  SET_USER_EMAIL,
+} from "../action.types";
 import { initialUserState } from "../initialStates/initialUserState";
 
 export const userReducer = (state = initialUserState, action) => {

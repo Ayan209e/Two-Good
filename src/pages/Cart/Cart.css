@@ -1,0 +1,27 @@
+.cart-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 24px;
+  padding-top: 150px;
+}
+
+.cart-page-message {
+  font-family: "futura";
+  font-weight: 500;
+  font-size: 72px;
+  text-transform: uppercase;
+  line-height: 1em;
+  max-width: 75%;
+  padding-top: 64px;
+}
+
+@media (max-width: 768px) {
+  .cart-page-message {
+    font-size: 32px;
+    max-width: 100%;
+    padding-top: 32px;
+  }
+}

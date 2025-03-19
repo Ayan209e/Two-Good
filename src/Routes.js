@@ -8,7 +8,9 @@ import { Impact } from "./pages/Impact/Impact";
 import { Stories } from "./pages/Stories/Stories";
 import { About } from "./pages/About/About";
 import { PDP } from "./pages/PDP/PDP";
-import { NotFound } from "./pages/NotFound.jsx/NotFound";
+import { NotFound } from "./pages/NotFound/NotFound";
+import { Cart } from "./pages/Cart/Cart";
+import { Checkout } from "./pages/Checkout/Checkout";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +25,8 @@ const AppRoutes = () => {
         <Route path="/stories" element={<Stories />} />
         <Route path="/about" element={<About />} />
         <Route path="/product/:slug" element={<PDP />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
