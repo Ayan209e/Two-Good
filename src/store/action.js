@@ -3,6 +3,7 @@ import {
   ADD_TO_CART,
   CART_TOTAL_AMOUNT,
   REMOVE_FROM_CART,
+  RESET_CART,
   SET_IS_LOGGED_IN,
   SET_STORE_DATA,
   SET_USER_EMAIL,
@@ -141,3 +142,9 @@ export const removeGiftCard = () => (dispatch, getState) => {
     payload: 0,
   });
 };
+
+export const resetCart = () => ({
+  type: RESET_CART,
+});
+
+

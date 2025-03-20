@@ -3,6 +3,7 @@ import {
   REMOVE_FROM_CART,
   CART_TOTAL_AMOUNT,
   ADD_CARD_TO_CART,
+  RESET_CART,
 } from "../action.types";
 import { initialCartState } from "../initialStates/cartInitialState";
 
@@ -28,6 +29,8 @@ export const cartReducer = (state = initialCartState, action) => {
         ...state,
         cards: action.payload,
       };
+    case RESET_CART:
+      return initialCartState;
     default:
       return state;
   }

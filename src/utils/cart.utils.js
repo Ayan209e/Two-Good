@@ -1,3 +1,4 @@
 export const formatPrice = (price) => {
-  return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  const roundedPrice = Math.round(price);
+  return roundedPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };

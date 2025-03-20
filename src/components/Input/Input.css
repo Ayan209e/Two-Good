@@ -1,0 +1,57 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.input-wrapper label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: "helvetica";
+  text-align: start;
+}
+
+.input-wrapper input {
+  padding: 4px;
+  padding-bottom: 8px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #999;
+  border-radius: 0;
+  outline: 0;
+  background-color: #fff;
+  color: #000;
+  font-family: "helvetica";
+}
+
+.input-wrapper input:disabled{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-spinner {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 900px) {
+  .checkout-content-desc,
+  .checkout-content-heading {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    text-align: start;
+  }
+  .customer-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

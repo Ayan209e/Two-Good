@@ -1,0 +1,142 @@
+.checkout-right-section {
+  width: 50%;
+}
+
+.checkout-content-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid black;
+  font-family: "futura";
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.checkout-content-heading span {
+  font-size: 12px;
+  font-family: "helvetica";
+}
+
+@media (max-width: 900px) {
+  .checkout-right-section {
+    width: 100%;
+    padding-bottom: 48px;
+  }
+}
+
+/* Products */
+.checkout-right-section-products {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+  padding-top: 12px;
+}
+
+.checkout-right-section-product-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 75px;
+  gap: 12px;
+}
+
+.checkout-right-section-product-card-content {
+  display: flex;
+  gap: 12px;
+  max-width: 75%;
+}
+
+.checkout-right-section-product-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 75px;
+  height: 75px;
+  overflow: hidden;
+}
+
+.checkout-right-section-product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.checkout-right-section-product-card-desc {
+  font-family: "helvetica";
+  font-size: 16px;
+  display: flex;
+  gap: 4px;
+  text-transform: capitalize;
+}
+
+.checkout-right-section-product-card-price {
+  font-family: "helvetica";
+  font-size: 16px;
+}
+
+/* Summary */
+.checkout-right-section-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.checkout-right-section-summary .subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid black;
+}
+
+.subtotal .head,
+.subtotal .cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.subtotal .head {
+  font-family: "helvetica";
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.subtotal .cont {
+  font-family: "helvetica";
+  font-size: 14px;
+}
+
+.checkout-right-section-summary .total {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid black;
+  font-family: "helvetica";
+  font-size: 14px;
+}
+
+.checkout-right-section-summary .total h1 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.checkout-right-section-summary .tax {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid black;
+  font-family: "helvetica";
+  font-size: 14px;
+}
+
+.checkout-right-section-summary .tax h1 {
+  font-size: 16px;
+}
