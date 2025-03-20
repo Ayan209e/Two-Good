@@ -12,6 +12,7 @@ import {
   TOGGLE_SHOW_DONATION_MENU,
 } from "./action.types";
 
+// User Store
 export const setStoreData = (data) => ({
   type: SET_STORE_DATA,
   payload: data,
@@ -27,6 +28,7 @@ export const setUserEmail = (email) => ({
   payload: email,
 });
 
+// Brand Store
 export const toggleOverlay = (val) => ({
   type: TOGGLE_OVERLAY,
   payload: val,
@@ -42,6 +44,7 @@ export const toggleShowDonationMenu = (val) => ({
   payload: val,
 });
 
+// Cart Store
 export const addProductToCart = (product) => (dispatch, getState) => {
   const { cartStore } = getState();
   if (!cartStore) {

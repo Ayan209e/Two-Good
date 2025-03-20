@@ -1,9 +1,14 @@
+// User Store
 export const SET_STORE_DATA = "SET_STORE_DATA";
 export const SET_IS_LOGGED_IN = "SET_IS_LOGGED_IN";
 export const SET_USER_EMAIL = "SET_USER_EMAIL";
+
+// Brand Store
 export const TOGGLE_OVERLAY = "TOGGLE_OVERLAY";
 export const TOGGLE_NAVBAR_MENU_LIST = "TOGGLE_NAVBAR_MENU_LIST";
 export const TOGGLE_SHOW_DONATION_MENU = "TOGGLE_SHOW_DONATION_MENU";
+
+// Cart Store
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 export const CART_TOTAL_AMOUNT = "CART_TOTAL_AMOUNT";
