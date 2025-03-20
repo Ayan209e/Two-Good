@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { formatPrice } from "../../../utils/cart.utils";
 import gsap from "gsap";
 
-export const CheckoutRightSectionSummary = () => {
+export const CheckoutRightSectionSummary = ({ isOrderPlaced }) => {
   const cart = useSelector((state) => state.cartStore);
   const totalAmount = cart.totalAmount;
   const tax = totalAmount * 0.18;
@@ -26,7 +26,7 @@ export const CheckoutRightSectionSummary = () => {
         }
       );
     }
-  }, []);
+  }, [isOrderPlaced]);
 
   return (
     <div className="checkout-right-section-summary" ref={summaryRef}>

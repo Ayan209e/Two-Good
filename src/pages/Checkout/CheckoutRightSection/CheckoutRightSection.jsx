@@ -29,9 +29,9 @@ export const CheckoutRightSection = ({ isOrderPlaced }) => {
         <span onClick={() => (window.location.href = "/cart")}>Edit Cart</span>
       </div>
 
-      <CheckoutRightSectionProducts />
+      <CheckoutRightSectionProducts isOrderPlaced={isOrderPlaced} />
 
-      <CheckoutRightSectionSummary />
+      <CheckoutRightSectionSummary isOrderPlaced={isOrderPlaced} />
     </div>
   );
 };

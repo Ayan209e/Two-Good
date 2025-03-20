@@ -4,7 +4,7 @@ import { getProductBySlug } from "../../../utils/product.utils";
 import { formatPrice } from "../../../utils/cart.utils";
 import gsap from "gsap";
 
-export const CheckoutRightSectionProducts = () => {
+export const CheckoutRightSectionProducts = ({ isOrderPlaced }) => {
   const cart = useSelector((state) => state.cartStore);
   const cartProducts = cart.products;
 
@@ -19,13 +19,17 @@ export const CheckoutRightSectionProducts = () => {
   return (
     <div className="checkout-right-section-products">
       {products.map((product) => (
-        <CheckoutRightSectionProductCard key={product.id} product={product} />
+        <CheckoutRightSectionProductCard
+          key={product.id}
+          product={product}
+          isOrderPlaced={isOrderPlaced}
+        />
       ))}
     </div>
   );
 };
 
-export const CheckoutRightSectionProductCard = ({ product }) => {
+export const CheckoutRightSectionProductCard = ({ product, isOrderPlaced }) => {
   const { name, image, price, quantity } = product;
 
   const productRef = useRef(null);
@@ -43,7 +47,7 @@ export const CheckoutRightSectionProductCard = ({ product }) => {
         }
       );
     }
-  }, []);
+  }, [isOrderPlaced]);
 
   return (
     <div className="checkout-right-section-product-card" ref={productRef}>
