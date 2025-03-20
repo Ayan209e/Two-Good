@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { getProductBySlug } from "../../../utils/product.utils";
 import { formatPrice } from "../../../utils/cart.utils";
+import gsap from "gsap";
 
 export const CheckoutRightSectionProducts = () => {
   const cart = useSelector((state) => state.cartStore);
@@ -27,8 +28,25 @@ export const CheckoutRightSectionProducts = () => {
 export const CheckoutRightSectionProductCard = ({ product }) => {
   const { name, image, price, quantity } = product;
 
+  const productRef = useRef(null);
+
+  useEffect(() => {
+    if (productRef.current) {
+      gsap.fromTo(
+        productRef.current,
+        { opacity: 0, x: 500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, []);
+
   return (
-    <div className="checkout-right-section-product-card">
+    <div className="checkout-right-section-product-card" ref={productRef}>
       <div className="checkout-right-section-product-card-content">
         <div className="checkout-right-section-product-card-image">
           <img src={image} alt={name} />

@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Input } from "../../../components/Input/Input";
+import gsap from "gsap";
 
 export const ShippingForm = ({
   defaultValues,
@@ -37,6 +38,22 @@ export const ShippingForm = ({
     postalCode: defaultPostalCode,
     note: defaultNote,
   } = defaultValues;
+
+  const shippingRef = useRef(null);
+  useEffect(() => {
+    if (shippingRef.current) {
+      gsap.fromTo(
+        shippingRef.current,
+        { opacity: 0, y: 500 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, [open]);
 
   return (
     <div className="customer-form-wrapper">
@@ -80,7 +97,7 @@ export const ShippingForm = ({
       </div>
 
       {open && (
-        <div className="shipping-form">
+        <div className="shipping-form" ref={shippingRef}>
           <div className="shipping-row">
             <Input
               label="First Name"

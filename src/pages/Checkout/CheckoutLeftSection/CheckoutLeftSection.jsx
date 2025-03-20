@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./CheckoutLeftSection.css";
 import { CustomerForm } from "./CustomerForm";
 import { ShippingForm } from "./ShippingForm";
 import { PaymentSection } from "./PaymentSection";
 import { useDispatch } from "react-redux";
 import { resetCart } from "../../../store/action";
+import gsap from "gsap";
 
 export const CheckoutLeftSection = ({ setIsOrderPlaced, setCustomerName }) => {
   const dispatch = useDispatch();
@@ -45,14 +46,8 @@ export const CheckoutLeftSection = ({ setIsOrderPlaced, setCustomerName }) => {
   };
 
   const validateShippingForm = () => {
-    const {
-      firstName,
-      lastName,
-      phoneNumber,
-      address,
-      state,
-      postalCode,
-    } = shippingForm;
+    const { firstName, lastName, phoneNumber, address, state, postalCode } =
+      shippingForm;
     setIsShippingFormValid(
       firstName.trim() !== "" &&
         lastName.trim() !== "" &&
@@ -125,8 +120,48 @@ export const CheckoutLeftSection = ({ setIsOrderPlaced, setCustomerName }) => {
     window.location.href = "/";
   };
 
+  useEffect(() => {
+    if (orderPlaced) {
+      setTimeout(() => {
+        continueShopping();
+      }, 10000);
+    }
+  }, [orderPlaced]);
+
+  const leftRef = useRef(null);
+  const orderPlacedRef = useRef(null);
+
+  useEffect(() => {
+    if (leftRef.current) {
+      gsap.fromTo(
+        leftRef.current,
+        { opacity: 0, x: -500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, []);
+  useEffect(() => {
+    if (orderPlacedRef.current) {
+      gsap.fromTo(
+        orderPlacedRef.current,
+        { opacity: 0, y: 500 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, [orderPlaced]);
+
   return orderPlaced ? (
-    <div className="checkout-left-section order-placed">
+    <div className="checkout-left-section order-placed" ref={orderPlacedRef}>
       <h1>Your order has been placed!...</h1>
       <p>
         We've received your order and are processing your payment. Once the
@@ -146,7 +181,7 @@ export const CheckoutLeftSection = ({ setIsOrderPlaced, setCustomerName }) => {
       </button>
     </div>
   ) : (
-    <div className="checkout-left-section">
+    <div className="checkout-left-section" ref={leftRef}>
       <CustomerForm
         isCustomerFormValid={isCustomerFormValid}
         customerFormSubmitted={customerFormSubmitted}
@@ -159,7 +194,7 @@ export const CheckoutLeftSection = ({ setIsOrderPlaced, setCustomerName }) => {
       />
 
       <ShippingForm
-      isShippingFormValid={isShippingFormValid}
+        isShippingFormValid={isShippingFormValid}
         shippingFormSubmitted={shippingFormSubmitted}
         defaultValues={shippingForm}
         open={showShippingForm}

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./CheckoutRightSection.css";
 import { useSelector } from "react-redux";
 import { formatPrice } from "../../../utils/cart.utils";
+import gsap from "gsap";
 
 export const CheckoutRightSectionSummary = () => {
   const cart = useSelector((state) => state.cartStore);
@@ -10,8 +11,25 @@ export const CheckoutRightSectionSummary = () => {
   const shipping = totalAmount > 200 ? 0 : 15;
   const total = totalAmount + tax + shipping;
 
+  const summaryRef = useRef(null);
+
+  useEffect(() => {
+    if (summaryRef.current) {
+      gsap.fromTo(
+        summaryRef.current,
+        { opacity: 0, x: 500 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.6,
+          ease: "power3.out",
+        }
+      );
+    }
+  }, []);
+
   return (
-    <div className="checkout-right-section-summary">
+    <div className="checkout-right-section-summary" ref={summaryRef}>
       <div className="subtotal">
         <div className="head">
           <span>Subtotal</span>
