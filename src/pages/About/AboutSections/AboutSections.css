@@ -1,0 +1,11 @@
+.about-sections {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+  transition: all 0.3s ease;
+  /* background-color: steelblue; */
+}
+
+/* .about-sections:hover{
+    opacity: 0.3;
+} */

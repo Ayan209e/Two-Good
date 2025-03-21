@@ -1,0 +1,55 @@
+.expandable-content-wrapper {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+/* Trigger */
+.expandable-content-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  font-family: "futura";
+  font-size: 64px;
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.expandable-content-trigger .caret-up {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+  padding-bottom: 4px;
+  perspective: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.expandable-content-trigger .caret-up.rotate-180 {
+  rotate: -180deg;
+}
+
+.expandable-content-trigger .caret-up svg {
+  stroke: #000;
+}
+
+.expandable-content-wrapper:hover .expandable-content-trigger {
+  opacity: 1;
+}
+
+/* Content */
+.expandable-content {
+  font-family: "helvetica";
+  font-size: 28px;
+}
