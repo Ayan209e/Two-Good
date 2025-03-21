@@ -1,8 +1,11 @@
-import React from 'react'
-import { WIP } from '../../components/WIP/WIP'
+import React from "react";
+import { MainSection } from "./MainSection/MainSection";
 
 export const About = () => {
   return (
-    <WIP />
-  )
-}
+    <div className="about">
+      <MainSection />
+      {/* <div id="ddd">dsfdsf</div> */}
+    </div>
+  );
+};
