@@ -44,3 +44,435 @@
   flex-direction: column;
   gap: 16px;
 }
+
+@media (max-width: 900px) {
+  .who-we-are-wrapper {
+    margin: 48px 0;
+  }
+
+  .who-we-are {
+    width: 100%;
+    text-align: center;
+  }
+
+  .who-we-are-head {
+    font-size: 24px;
+    max-width: 100%;
+    margin-right: 0px;
+  }
+
+  .who-we-are-desc {
+    font-size: 16px;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .who-we-are-desc div {
+    width: 100%;
+  }
+}
+
+/* Mission & Values */
+.mission-values {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 32px;
+  padding-right: 150px;
+  padding-top: 150px;
+  padding-bottom: 120px;
+  font-family: "helvetica";
+  font-size: 24px;
+  line-height: 130%;
+}
+
+.mission-values-text {
+  width: 50%;
+  max-width: 700px;
+}
+
+.mission-values-cards {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mission-values-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 24px;
+  padding: 24px;
+  height: 280px;
+  background-color: #eeeeee;
+  white-space: pre-wrap;
+  line-height: 1.3em;
+  font-size: 16px;
+}
+
+.mission-values-card h1 {
+  font-family: "futura";
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.mission-values-card.black-card {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .mission-values {
+    gap: 24px;
+    padding-right: 0px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+    font-size: 16px;
+  }
+
+  .mission-values-text {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .mission-values-card {
+    height: 200px;
+    font-size: 14px;
+  }
+
+  .mission-values-card h1 {
+    font-size: 20px;
+  }
+}
+
+/* Our Team */
+.our-team {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+  gap: 48px;
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.our-team-text {
+  width: 75%;
+  display: flex;
+  justify-content: end;
+  text-align: end;
+}
+
+.our-team-grid-wrapper {
+  width: 75%;
+}
+
+.our-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.team-card h2 {
+  margin-top: 12px;
+  font-size: 16px;
+  font-family: "helvetica";
+}
+
+.team-card h3 {
+  font-size: 14px;
+  color: #00000080;
+  font-family: "helvetica";
+  margin-top: 2px;
+}
+
+.load-more-button {
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  align-self: flex-start;
+  padding: 3px 16px 0;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  letter-spacing: 0.6px;
+  transition: all 0.15s ease;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;
+}
+
+.load-more-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .our-team {
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  .our-team-text {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .our-team-grid-wrapper {
+    width: 100%;
+  }
+
+  .our-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-card h2 {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .team-card h3 {
+    font-size: 12px;
+  }
+
+  .load-more-button {
+    margin-top: 24px;
+    font-size: 10px;
+  }
+}
+
+/* Good Places */
+.good-places {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 48px;
+  padding-top: 150px;
+  padding-bottom: 120px;
+}
+
+.good-places-text {
+  width: 50%;
+}
+
+.good-places-text p {
+  width: 60%;
+  font-family: "helvetica";
+  font-size: 24px;
+  line-height: 1.5;
+  padding-left: 12px;
+}
+
+.good-places-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.good-places-item {
+  width: calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.good-places-item-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.good-places-item-name {
+  font-family: "futura";
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+}
+
+.good-places-item-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  font-family: "helvetica";
+  line-height: 1.5;
+}
+
+.good-places-item-content-left {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 70%;
+}
+
+.good-places-item-content-right {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  max-width: 200px;
+  width: 20%;
+}
+
+.good-places-item-location-cta {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  height: 35px;
+  border-radius: 1000px;
+  border: 1px solid #000;
+  align-self: flex-start;
+  padding: 3px 16px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  letter-spacing: 0.6px;
+  transition: all 0.15s ease;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.good-places-item-location-cta:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .good-places {
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  .good-places-text {
+    width: 100%;
+  }
+
+  .good-places-text p {
+    width: 100%;
+    font-size: 16px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .good-places-list {
+    flex-direction: column;
+  }
+
+  .good-places-item {
+    width: 100%;
+  }
+
+  .good-places-item-name {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .good-places-item-content {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  .good-places-item-content-left {
+    width: 100%;
+  }
+
+  .good-places-item-content-right {
+    gap: 12px;
+    font-size: 12px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .good-places-item-location-cta {
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    align-self: flex-end;
+    height: 28px;
+    padding: 2px 8px 0;
+  }
+}
+
+/* Sustainability */
+.sustainability-content {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "helvetica";
+  max-width: 90%;
+  margin-top: -24px;
+}
+
+@media (max-width: 900px) {
+  .sustainability-content {
+    font-size: 12px;
+    max-width: 100%;
+  }
+}
+
+/* Foundation Board */
+.foundation-grid {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.foundation-about-card-image {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.foundation-about-slide-in {
+  background: #ffffffdb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "helvetica";
+  padding: 12px;
+  transition: all 0.3s ease;
+  transform: translate(0, 100%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.foundation-grid .team-card:hover .foundation-about-slide-in {
+  transform: translate(0);
+  z-index: 1;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .foundation-grid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
