@@ -1,0 +1,111 @@
+.catering {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+  padding: 24px;
+  gap: 24px;
+}
+
+/* Catering Header Section */
+.catering-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.catering-header h1 {
+  font-size: 2.5rem;
+  font-family: "futura";
+  text-transform: uppercase;
+  font-size: calc((100vw - 48px) * 0.1695);
+  letter-spacing: -0.05em;
+  line-height: 0.92em;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.catering-header span {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.catering-header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .catering-header h1 {
+    font-size: calc((100vw - 32px) * 0.168);
+    margin-top: -24px;
+  }
+}
+
+/* Catering Quote */
+.catering-quote {
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 56px;
+  line-height: 1em;
+  font-family: "futura";
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-top: 84px;
+  margin-bottom: 48px;
+}
+
+.catering-quote-cta {
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+}
+
+.catering-quote-cta button {
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .catering-quote {
+    font-size: 28px;
+    margin-top: 24px;
+    margin-bottom: -24px;
+  }
+
+  .catering-quote-cta {
+    display: flex;
+    justify-content: center;
+    padding-top: 24px;
+  }
+
+  .catering-quote-cta button {
+    font-size: 10px;
+  }
+}
+
+/* Catering Content */
+.catering-content-cta {
+  display: flex;
+}
+
+.catering-content-cta button {
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .catering-content-cta {
+    justify-content: center;
+  }
+
+  .catering-content-cta button {
+    letter-spacing: 0.05em;
+    font-size: 12px;
+  }
+}
