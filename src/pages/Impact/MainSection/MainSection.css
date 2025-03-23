@@ -1,0 +1,134 @@
+.impact-main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  width: 100%;
+  padding-top: 180px;
+  background: linear-gradient(
+    0deg,
+    rgba(233, 252, 156, 0) 0%,
+    rgba(233, 252, 156, 1) 47%,
+    rgba(233, 252, 156, 1) 100%
+  );
+}
+
+/* Impact Parameters */
+.impact-parameters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: end;
+  font-family: "futura";
+}
+
+.impact-parameters::selection,
+.impact-counter::selection,
+.impact-title::selection {
+  background-color: transparent;
+  color: #000;
+}
+
+.impact-counter {
+  font-size: 100px;
+  line-height: 1em;
+}
+
+.impact-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  height: 170px;
+}
+
+.impact-title {
+  max-width: 540px;
+  font-size: 40px;
+  text-align: right;
+  text-transform: uppercase;
+  line-height: 1em;
+}
+
+.impact-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.impact-previous svg,
+.impact-next svg {
+  width: 28px;
+  height: 28px;
+}
+
+.impact-previous svg {
+  transform: rotate(180deg);
+  margin-top: 3px;
+}
+
+@media (max-width: 1232px) {
+  .impact-counter {
+    font-size: 6vw;
+  }
+
+  .impact-title {
+    max-width: 440px;
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .impact-parameters {
+    flex-direction: column;
+  }
+
+  .impact-counter {
+    font-size: 12vw;
+  }
+
+  .impact-carousel {
+    height: 150px;
+  }
+
+  .impact-title {
+    font-size: 5vw;
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 500px) {
+  .impact-carousel {
+    height: 80px;
+  }
+
+  .impact-title {
+    font-size: 5vw;
+  }
+}
+
+/* Video Section */
+.impact-section-video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.impact-section-video-container video {
+  margin: 0 !important;
+}
+
+.impact-section-video-container h2 {
+  font-family: "abc";
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 900px) {
+  .impact-section-video-container h2 {
+    font-size: 8px;
+  }
+}

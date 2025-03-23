@@ -1,8 +1,14 @@
-import React from 'react'
-import { WIP } from '../../components/WIP/WIP'
+import React from "react";
+import { MainSection } from "./MainSection/MainSection";
+import { Report } from "./Report";
+import { ImpactSections } from "./ImpactSections/ImpactSections";
 
 export const Impact = () => {
   return (
-    <WIP />
-  )
-}
+    <div className="impact">
+      <MainSection />
+      <Report />
+      <ImpactSections />
+    </div>
+  );
+};
