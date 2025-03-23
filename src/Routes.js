@@ -11,6 +11,7 @@ import { PDP } from "./pages/PDP/PDP";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { Cart } from "./pages/Cart/Cart";
 import { Checkout } from "./pages/Checkout/Checkout";
+import { Career } from "./pages/Career/Career";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
         <Route path="/shop/:slug" element={<Shop />} />
         <Route path="/catering" element={<Catering />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/career" element={<Career />} />
         <Route path="/impact" element={<Impact />} />
         <Route path="/stories" element={<Stories />} />
         <Route path="/about" element={<About />} />

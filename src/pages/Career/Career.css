@@ -1,0 +1,106 @@
+.career-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 24px;
+  padding-top: 150px;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.career-section {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Career Header Section */
+.career-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.career-header h1 {
+  font-size: 8vw;
+  font-family: "futura";
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.92em;
+  overflow: hidden;
+}
+
+.career-header span {
+  display: inline-block;
+  padding-top: 10px;
+  transform: translate(6px, 0);
+}
+
+@media (max-width: 900px) {
+  .career-section {
+    gap: 48px;
+  }
+
+  .career-header {
+    gap: 0px;
+  }
+}
+
+/* Career Content Section */
+.career-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "helvetica";
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 40%;
+}
+
+/* Animations */
+.career-scroll-wrapper {
+  width: calc(100% + 48px);
+  overflow: hidden;
+  margin-left: -24px;
+}
+
+.career-scroll {
+  border-bottom: 1px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.career-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.career-scroll h1 {
+  color: white;
+  font-family: "futura";
+  font-weight: 100;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 120px;
+  line-height: 100px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  padding-top: 24px;
+  animation-timing-function: linear;
+  margin-right: 64px;
+  animation-name: career-scroll;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.career-scroll.bottom {
+  border-top: 0px;
+}
+
+@keyframes career-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
