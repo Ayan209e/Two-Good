@@ -1,0 +1,483 @@
+/* Our Programs */
+.our-programs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 24px;
+  padding: 100px 0;
+  width: 100%;
+}
+
+.our-programs-card {
+  width: calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+.our-programs-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.our-programs-card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.our-programs-card h1 {
+  font-family: "futura";
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+.our-programs-card-content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "helvetica";
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .our-programs {
+    padding: 50px 0;
+  }
+
+  .our-programs-card {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 24px;
+  }
+
+  .our-programs-card h1 {
+    font-size: 16px;
+  }
+
+  .our-programs-card-content {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+/* Our Theory */
+.our-theory {
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: start;
+  padding: 120px 0;
+}
+
+.our-theory-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 50%;
+}
+
+.our-theory-content p {
+  font-family: "helvetica";
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.our-theory-content h1 {
+  font-size: 28px;
+  font-family: "futura";
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.our-theory-image {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.our-theory-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .our-theory {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 24px;
+  }
+
+  .our-theory-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .our-theory-content p {
+    font-size: 12px;
+  }
+
+  .our-theory-content h1 {
+    font-size: 18px;
+  }
+
+  .our-theory-image {
+    width: 100%;
+  }
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+  padding: 100px 0;
+}
+
+.testimonials h1 {
+  font-family: "helvetica";
+  font-size: 28px;
+  line-height: 1.2;
+  width: 45%;
+  padding-right: 48px;
+}
+
+.testimonials h2 {
+  width: 45%;
+  padding-right: 20%;
+  font-size: 16px;
+  font-family: "helvetica";
+  line-height: 140%;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.impact-testimonial-card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.impact-testimonial-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.impact-testimonial-card:hover img {
+  transform: scale(1.1);
+}
+
+.impact-testimonial-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  color: white;
+  gap: 24px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.impact-testimonial-card:hover .impact-testimonial-content {
+  opacity: 1;
+}
+
+.impact-testimonial-date {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-family: "abc";
+  letter-spacing: 0.05em;
+  transform: translateY(-100%);
+  transition: all 0.3s ease;
+}
+
+.impact-testimonial-card:hover .impact-testimonial-date {
+  transform: translateY(0);
+}
+
+.impact-testimonial-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.impact-testimonial-card:hover .impact-testimonial-text {
+  transform: translateY(0);
+}
+
+.impact-testimonial-text h1 {
+  padding: 0;
+  width: 100%;
+  font-size: 40px;
+  line-height: 0.9em;
+  text-transform: uppercase;
+}
+
+.impact-testimonial-text h2 {
+  padding: 0;
+  width: 100%;
+  font-size: 24px;
+  line-height: 0.9em;
+  text-transform: uppercase;
+  text-align: end;
+  color: #ffffff90;
+}
+
+@media (max-width: 900px) {
+  .testimonials {
+    padding: 50px 0;
+  }
+
+  .testimonials h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    width: 100%;
+    padding-right: 0%;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .impact-testimonial-text h1 {
+    padding: 0;
+    width: 100%;
+    font-size: 40px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    text-align: start;
+  }
+
+  .impact-testimonial-text h2 {
+    padding: 0;
+    width: 100%;
+    font-size: 24px;
+    line-height: 0.9em;
+    text-transform: uppercase;
+    text-align: end;
+    color: #ffffff90;
+  }
+}
+
+/* Good Teams */
+.good-teams {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 24px;
+  padding: 100px 0;
+  width: 100%;
+}
+
+.good-teams h2 {
+  width: 50%;
+  align-self: flex-end;
+  padding-left: 12px;
+  padding-right: 180px;
+  font-family: "helvetica";
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.good-teams-content {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.good-teams-card {
+  width: calc(50% - 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.good-teams-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.good-teams-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.good-teams-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "helvetica";
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.good-teams-links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: start;
+}
+
+@media (max-width: 900px) {
+  .good-teams {
+    padding: 50px 0;
+  }
+
+  .good-teams h2 {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .good-teams-content {
+    flex-direction: column;
+  }
+
+  .good-teams-card {
+    width: 100%;
+    padding-bottom: 24px;
+    align-items: start;
+    text-align: start;
+    justify-content: start;
+  }
+
+  .good-teams-text {
+    gap: 12px;
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .good-teams-links {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+}
+
+/* Donate Section */
+.impact-donate-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 100px 0;
+}
+
+.impact-donate {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 60%;
+  align-self: flex-end;
+}
+
+.impact-donate h2 {
+  font-family: "helvetica";
+  font-size: 28px;
+  line-height: 1.2;
+  max-width: 80%;
+}
+
+.donate-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.donate-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: "helvetica";
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 80%;
+}
+
+.impact-donate button {
+  width: fit-content;
+  text-transform: uppercase;
+  font-size: 12px;
+  height: 35px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  padding: 6px 16px 2px;
+  display: flex;
+  align-items: center;
+  background: #000;
+  letter-spacing: 0.6px;
+  transition: all 0.25s ease;
+  color: #fff;
+}
+
+.impact-donate button:hover {
+  background: #fff;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .impact-donate-wrapper {
+    padding: 50px 0;
+  }
+
+  .impact-donate {
+    width: 100%;
+    align-self: center;
+  }
+
+  .impact-donate h2 {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  .donate-content {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
