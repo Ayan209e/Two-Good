@@ -16,6 +16,10 @@
   flex-wrap: wrap;
 }
 
+.footer-content a{
+  display: block;
+}
+
 .footer-content .connect .head,
 .footer-content .gritty .head {
   font-size: 12px;

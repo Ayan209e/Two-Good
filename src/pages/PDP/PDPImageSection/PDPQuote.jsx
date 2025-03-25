@@ -8,8 +8,6 @@ export const PDPQuote = () => {
     title:
       "’’We’re like a little blooming garden. It's really beautiful to see.''",
     desc: "’’Everyone’s getting employment, new houses – one of us has even started her own café! We're all brighter…we’re shining diamond versions of ourselves.''",
-    ctaText: "READ COURTNEY'S STORY.",
-    ctaHref: "/stories/courtney",
   };
 
   const titleRef = useRef(null);

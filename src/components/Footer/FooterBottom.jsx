@@ -73,8 +73,12 @@ export const FooterBottom = () => {
     <div className="footer-bottom">
       <div className="tnc" ref={tncRef}>
         <div>© Two Good Co. 2025</div>
-        <div>Terms of Use</div>
-        <div>Privacy Policy</div>
+        <div onClick={() => (window.location.href = "/terms-of-use")}>
+          Terms of Use
+        </div>
+        <div onClick={() => (window.location.href = "/privacy-policy")}>
+          Privacy Policy
+        </div>
       </div>
 
       <div className="content" ref={contentRef}>

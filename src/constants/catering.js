@@ -28,8 +28,6 @@ export const cateringContent = [
       "Every catering order has been made with love and care, generating life-changing employment hours for women rebuiding their lives and finding their way home again.",
       "If you can, learn their stories; let yourself fall into their words. We swear, it makes the food taste so much better.",
     ],
-    ctaTitle: "READ THEIR STORIES",
-    ctaHref: "/stories",
     image1:
       "https://cdn.sanity.io/images/w8f1ak3c/production/59dbaeff4d6bdbed78cf367752d66266292fa0d5-1029x1142.png/Green-Tomato-Bush-Basil-Chutney-Two-Good-Co.png?rect=129,0,772,1142&w=1024&h=1515&fit=min&auto=format",
     image2:

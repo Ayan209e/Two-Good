@@ -40,7 +40,6 @@ const Overlay = ({
       shop: () => handleRedirection("/shop"),
       catering: () => handleRedirection("/catering"),
       impact: () => handleRedirection("/impact"),
-      stories: () => handleRedirection("/stories"),
       about: () => handleRedirection("/about"),
       contact: () => handleRedirection("/contact"),
       donate: handleDonationFlow,

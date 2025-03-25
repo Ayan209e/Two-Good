@@ -1,0 +1,111 @@
+.terms-privacy-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 24px;
+  padding-top: 200px;
+}
+
+.terms-privacy-head {
+  font-size: 7vw;
+  font-family: "futura";
+  line-height: 0.9em;
+  text-transform: uppercase;
+}
+
+.terms-privacy-head {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.85em;
+}
+
+.terms-privacy-head h1 {
+  display: flex;
+  gap: 24px;
+  font-size: 7vw;
+  font-family: "futura";
+  line-height: 0.9em;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.terms-privacy-head span {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.terms-privacy-content {
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.terms-privacy-content-left {
+  width: 40%;
+  font-family: "futura";
+  font-size: 2.4vw;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.terms-privacy-content-right {
+  letter-spacing: 0.01em;
+  font-size: 16px;
+  font-family: "helvetica";
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 50%;
+  margin-right: 48px;
+}
+
+.terms-privacy-content-right h2 {
+  font-family: "futura";
+  letter-spacing: 0.01em;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 12px;
+}
+
+.term {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .terms-privacy-head {
+    font-size: 10vw;
+  }
+
+  .terms-privacy-content {
+    flex-direction: column;
+  }
+
+  .terms-privacy-content-left {
+    width: 100%;
+    line-height: 1.3;
+  }
+
+  .terms-privacy-content-right {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .terms-privacy-content-right h2 {
+    font-family: "futura";
+    letter-spacing: 0.01em;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-top: 12px;
+  }
+
+  .term {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}

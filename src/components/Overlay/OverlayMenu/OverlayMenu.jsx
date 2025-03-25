@@ -27,7 +27,6 @@ const OverlayMenu = ({ isOverlayOpen, handleClick }) => {
         "Shop",
         "Catering",
         "Impact",
-        "Stories",
         "About",
         "Contact",
         "Donate",
