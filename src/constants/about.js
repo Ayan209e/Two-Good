@@ -10,31 +10,37 @@ export const aboutSections = [
     index: "01",
     title: "Who we are",
     content: <WhoWeAre />,
+    id: "who-we-are",
   },
   {
     index: "02",
     title: "Mission & Values",
     content: <MissionValues />,
+    id: "mission-values",
   },
   {
     index: "03",
     title: "Our Team",
     content: <OurTeam />,
+    id: "our-team",
   },
   {
     index: "04",
     title: "Good Places",
     content: <GoodPlaces />,
+    id: "good-places",
   },
   {
     index: "05",
     title: "Sustainability",
     content: <Sustainability />,
+    id: "sustainability",
   },
   {
     index: "06",
     title: "Two Good Foundation Board",
     content: <FoundationBoard />,
+    id: "two-good-foundation-board",
   },
 ];
 
@@ -322,6 +328,7 @@ export const foundationBoard = [
     title: "Board Member",
     image:
       "https://cdn.sanity.io/images/w8f1ak3c/production/8f4929da306fe5ce857a8cd6780eadd0dd00fc88-5504x8256.jpg/RRH_0708.jpg?rect=162,2305,4856,4900&fp-x=0.47058823529411764&fp-y=0.5759044117647059&w=1024&h=1024&fit=crop&crop=focalpoint&auto=format",
-      about: "Sarah is an accomplished leader with an extensive career in hospitality and a deep commitment to people and social impact. As CEO of Accor Pacific, she led one of the region’s largest hotel groups, driving growth, innovation and heart. Now, as CEO of Homeward Bound, Sarah is spearheading a global initiative to empower women in leadership roles across the world, particularly in science and sustainability."
+    about:
+      "Sarah is an accomplished leader with an extensive career in hospitality and a deep commitment to people and social impact. As CEO of Accor Pacific, she led one of the region’s largest hotel groups, driving growth, innovation and heart. Now, as CEO of Homeward Bound, Sarah is spearheading a global initiative to empower women in leadership roles across the world, particularly in science and sustainability.",
   },
 ];

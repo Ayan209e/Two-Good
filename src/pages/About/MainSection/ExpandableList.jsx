@@ -49,7 +49,6 @@ export const ExpandableList = () => {
         <a href="#mission-values">Mission & Values</a>
         <a href="#our-team">Our team</a>
         <a href="#good-places">Good places</a>
-        <a href="#good-people">Good people</a>
         <a href="#sustainability">Sustainability</a>
         <a href="#two-good-foundation-board">Two Good Foundation Board</a>
       </div>

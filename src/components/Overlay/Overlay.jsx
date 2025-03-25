@@ -54,7 +54,7 @@ const Overlay = ({
   return (
     <div className={`overlay ${isOverlayOpen ? "open" : ""}`}>
       <div className="left-section">
-        <OverlayQuickLinks />
+        <OverlayQuickLinks toggleNavbarOverlay={toggleNavbarOverlay} />
       </div>
       <div className="right-section">
         {showDonationMenu || showSignInMenu ? (

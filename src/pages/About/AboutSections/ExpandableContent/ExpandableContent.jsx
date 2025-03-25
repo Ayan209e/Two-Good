@@ -5,12 +5,12 @@ import { aboutSections } from "../../../../constants/about";
 import gsap from "gsap";
 
 export const ExpandableContent = () => {
-  return aboutSections.map(({ index, title, content }) => (
-    <ExpandableContentItem index={index} title={title} content={content} />
+  return aboutSections.map(({ index, title, content, id }) => (
+    <ExpandableContentItem index={index} title={title} content={content} id={id} />
   ));
 };
 
-export const ExpandableContentItem = ({ index, title, content }) => {
+export const ExpandableContentItem = ({ index, title, content, id }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleExpand = () => setIsExpanded(!isExpanded);
 
@@ -34,7 +34,7 @@ export const ExpandableContentItem = ({ index, title, content }) => {
 
   return (
     <div className="expandable-content-wrapper">
-      <div className="expandable-content-trigger" onClick={toggleExpand}>
+      <div className="expandable-content-trigger" onClick={toggleExpand} id={id}>
         <div>{index}</div>
         <div>{title}</div>
         <div className={`caret-up ${isExpanded ? "rotate-180" : ""}`}>

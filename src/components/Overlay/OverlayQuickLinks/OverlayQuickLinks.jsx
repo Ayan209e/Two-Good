@@ -1,7 +1,12 @@
 import React from "react";
 import "./OverlayQuickLinks.css";
 
-const OverlayQuickLinks = () => {
+const OverlayQuickLinks = ({ toggleNavbarOverlay }) => {
+  const handleRedirection = (href) => {
+    toggleNavbarOverlay();
+    // window.location.href = href;
+  };
+
   return (
     <div className="quick-links">
       <div className="link-col">
@@ -16,14 +21,24 @@ const OverlayQuickLinks = () => {
       </div>
       <div className="link-col">
         <div className="link-header">Nitty Gritties</div>
-        <a href="/good-things-faqs">Good Things FAQs</a>
-        <a href="/good-food-faqs">Good Food FAQs</a>
-        <a href="/good-places">Good Places</a>
+        <a className="item" href="/about" onClick={handleRedirection}>
+          About
+        </a>
+        <a className="item" href="/impact" onClick={handleRedirection}>
+          Impact
+        </a>
+        <a className="item" href="/catering" onClick={handleRedirection}>
+          Catering
+        </a>
       </div>
       <div className="link-col">
         <div className="link-header">Get Started</div>
-        <a href="https://twogood.com.au/pathways">Pathways</a>
-        <a href="https://twogood.com.au/careers">Careers</a>
+        <a className="item" href="/career" onClick={handleRedirection}>
+          Careers
+        </a>
+        <a className="item" href="/contact" onClick={handleRedirection}>
+          Contact Us
+        </a>
       </div>
     </div>
   );
